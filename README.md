@@ -8,10 +8,8 @@ links to outher websites, Money converter, Games, Safe Google, and lots more!
 ## Run Ned
 Run Ned at http://nedhome.ml/ or https://n-e-d.github.io/ned
 ## Source Files
-For source files take the part after the http://nedhome.ml and put it after https://github.com/n-e-d/ned/tree/gh-pages
+For source files take the part after the http://nedhome.ml and put it after https://github.com/n-e-d/ned/tree/master
 
 Ex:
 
-nedhome.ml<b>/about</b>
--->
-github.com/n-e-d/ned/tree/gh-pages<b>/about</b>
+nedhome.ml<b>/about</b> --> github.com/n-e-d/ned/tree/master<b>/about</b>
