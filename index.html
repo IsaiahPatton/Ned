@@ -107,10 +107,11 @@
                 b("Email", "Yahoo Mail", "yahoo.com");
     
                 function b(type, name, url) {
+					var image = name.toString().toLowerCase().replace(" ", "-").replace("$", "money");
                     var text = '<a href="http://'+url+'" class="'+type+' oldbutton">' + name +
                                '    <br>' +
                                '    <small class="small">'+type+'</small><br>' +
-                               '    <img src="images/'+name+'.png" alt="'+name+'" width="70" height="55">'+
+                               '    <img src="images/'+image+'.png" alt="'+name+'" width="70" height="55">'+
                                '</a>'
                     document.write(text);
                 }
