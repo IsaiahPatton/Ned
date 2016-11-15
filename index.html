@@ -108,6 +108,10 @@
     
                 function b(type, name, url) {
 					var image = name.toString().toLowerCase().replace(" ", "-").replace("$", "money");
+					var imageUp = name.toString().replace(" ", "-").replace("$", "money");
+					if (image != imageUp) {
+						image = imageUp;
+					}
                     var text = '<a href="http://'+url+'" class="'+type+' oldbutton">' + name +
                                '    <br>' +
                                '    <small class="small">'+type+'</small><br>' +
@@ -127,6 +131,12 @@
                         }
                     }
                 }
+			
+					function imgExist(url) {
+						var img = new Image();
+						img.src = url;
+						return img.height != 0;
+					}
             </script>
             <hr>
         </div>
