@@ -107,10 +107,9 @@
                 b("Email", "Yahoo Mail", "yahoo.com");
     
                 function b(type, name, url) {
-					var image = name.toString().toLowerCase().replace(" ", "-").replace("$", "money");
-					var imageUp = name.toString().replace(" ", "-").replace("$", "money");
-					if (image != imageUp) {
-						image = imageUp;
+					var image = name.toString().replace(" ", "-").replace("$", "money");
+					if (name != "Twitter" && name != "YouTube" && name != "Minecraft" && name != "Tv" && name != "ZunoZap") {
+						image = image.toLowerCase();
 					}
                     var text = '<a href="http://'+url+'" class="'+type+' oldbutton">' + name +
                                '    <br>' +
@@ -131,12 +130,6 @@
                         }
                     }
                 }
-			
-					function imgExist(url) {
-						var img = new Image();
-						img.src = url;
-						return img.height != 0;
-					}
             </script>
             <hr>
         </div>
