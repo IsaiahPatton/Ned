@@ -7,10 +7,10 @@
 
     <title>Ned!</title>
 
-    <!-- Ned stylesheets -->
-    <link href='https://isaiahpatton.github.io/stylesheets/koalahome-main.css' rel='stylesheet' type='text/css'>
+    <!-- Stylesheets -->
+    <link href="koalahome-main.css" rel='stylesheet' type='text/css'>
     <link href='https://isaiahpatton.github.io/stylesheets/fontStyles.css' rel='stylesheet' type='text/css'>
-    <link href='http://nedhome.ml/stylesheets/button.css' rel='stylesheet' type='text/css'>
+
     
     <!-- Bootstrap core CSS -->
     <link href="https://zunozap.github.io/assets/css/bootstrap.css" rel="stylesheet">
@@ -28,14 +28,15 @@
       <script src="https://zunozap.github.io/assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
-
+  <div id="banner">Welcome</div>
+  
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
 		
 	<!-- Menu -->
 	<nav class="menu" id="theMenu">
 		<div class="menu-wrap">
             <i class="icon-remove menu-close"></i>
-			<h1 class="logo" style="color:white">NedHome</h1>
+			<h1 class="logo" style="color:white">&nbsp;&nbsp;NedHome</h1>
             <p style="color:white"> Toggle Catagorys:</p>
             <center>
                 <button class="cat" onClick="showHide('NedApp')">NedApps</button><br><br>
@@ -51,12 +52,13 @@
 		<div id="menuToggle">Settings</div>
 	</nav>
     <center>
+        <img class="center" src="https://clipartion.com/wp-content/uploads/2015/12/koala-clipart-koala-clipart.png" width="300" height="100">
         <img class="center mainimg" src="http://i.imgur.com/AP5imrD.png" width="300" height="100" alt="NedHome Face Logo">
         <div class="bricks">
             <script>
-                b("NedApp", "Google");
-                b("NedApp", "Yahoo");
-                b("NedApp", "Calculator");
+                b("NedApp", "Google", "nedhome.ml/tools/google");
+                b("NedApp", "Yahoo", "nedhome.ml/tools/google?yahoo");
+                b("NedApp", "Calculator", "nedhome.ml/tools/calculator");
                 b("NedApp", "Clock", "nedhome.ml/tools/clock");
                 b("NedApp", "$ Converter", "nedhome.ml/tools/moneyconverter");
                 b("NedApp", "Holidays", "nedhome.ml/tools/holidays");
@@ -81,9 +83,9 @@
                 b("Kids", "Disney", "disney.com");
                 b("Kids", "Nick", "nick.com");
                 b("Kids", "CN", "cartoonnetwork.com");
-                b("Kids", "KidRex");
-                b("Kids", "GamesFreak");
-                b("Kids", "Minecraft");
+                b("Kids", "KidRex", "nedhome.ml/tools/google?kids");
+                b("Kids", "GamesFreak", "gamesfreak.net");
+                b("Kids", "Minecraft", "www.minecraft.net");
                 b("Kids", "PBS", "pbskids.org");
                 b("Kids", "CoolMath", "www.coolmath-games.com")
                 b("Kids", "Poptropica", "www.poptropica.com");
@@ -107,14 +109,11 @@
                 b("Email", "Yahoo Mail", "yahoo.com");
     
                 function b(type, name, url) {
-					var image = name.toString().replace(" ", "-").replace("$", "money");
-					if (name != "Twitter" && name != "Youtube" && name != "Minecraft" && name != "Tv" && name != "ZunoZap") {
-						image = image.toLowerCase();
-					}
+					var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();				
                     var text = '<a href="http://'+url+'" class="'+type+' oldbutton">' + name +
                                '    <br>' +
                                '    <small class="small">'+type+'</small><br>' +
-                               '    <img src="images/'+image+'.png" alt="'+name+'" width="70" height="55">'+
+                               '    <img src="images/'+type.toString().toLowerCase()+'/'+image+'.png" alt="'+name+'" width="70" height="55">'+
                                '</a>'
                     document.write(text);
                 }
@@ -145,49 +144,40 @@
 				<div class="col-lg-8">
 				</div>
 				<div class="col-lg-3 team">
-					<img class="img-circle" src="https://avatars1.githubusercontent.com/u/16439221?v=3&s90" height="90" width="90" alt="">
-					<h4>Isaiah Patton</h4>
-					<h5><i>Creater / Lead Developer</i></h5>
+					<img class="img-circle" src="https://avatars1.githubusercontent.com/u/16439221?v=3&s90" height="55" width="55" alt="">
+					<h5>Isaiah Patton</h5>
+					<h6><i>Creater / Lead Developer</i></h6>
 				</div>
 
 				<div class="col-lg-3 team">
-					<img class="img-circle" src="http://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" height="90" width="90" alt="">
+					<img class="img-circle" src="http://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" height="55" width="55" alt="">
+					<h5>Empty</h5>
+					<h6><i>Contact Isaiah to be an Developer</i></h6>
+				</div>
+
+				<!--<div class="col-lg-3 team">
+					<img class="img-circle" src="http://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" height="55" width="55" alt="">
 					<h4>Empty</h4>
 					<h5><i>Contact Isaiah to be an Developer</i></h5>
 				</div>
 
 				<div class="col-lg-3 team">
-					<img class="img-circle" src="http://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" height="90" width="90" alt="">
+					<img class="img-circle" src="http://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" height="55" width="55" alt="">
 					<h4>Empty</h4>
 					<h5><i>Contact Isaiah to be an Developer</i></h5>
-				</div>
+				</div>-->
 
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="http://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" height="90" width="90" alt="">
-					<h4>Empty</h4>
-					<h5><i>Contact Isaiah to be an Developer</i></h5>
-				</div>
-			</div>
+			</div> <!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /g -->
 
 	
 	<div id="c">
 		<div class="container">
-            <p>NedHome (aka Ned), Your New Home Page! (By Isaiah Patton)
+            <p>NedHome (aka Ned) &amp; KoalaHome, Your New Home Page! (By Isaiah Patton)
 			<br>Site Theme by: BLACKTIE.CO, using the Onassis theme by Carlos Alvarez</p>
 		</div>
-	</div>
-	
-	
-    <style>
-    a        { padding: 5px; margin: 2px; border: 2px blue solid; text-decoration: none; color: black; font-size: 19px; display: inline-block; }
-    button.cat { padding: 2px; padding-left: 3px; padding-right: 3px; margin: 1px; color: black; background-color: teal; display: inline-block; }
-    a:hover  { background-color: transparent; }
-    #banner  { display: block; background-color: teal; color: white; margin-bottom: 1px}
-    #menuToggle { width: 60px; }
-    </style>
-    
+	</div>    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
