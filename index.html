@@ -27,124 +27,42 @@
 		<![endif]-->
 	</head>
   
-	<body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
-	<!-- Menu -->
-	<div class="menu" id="theMenu">
-		<div class="menu-wrap">
-			<h1 class="logo" style="color:white">NedHome</h1>
-            <p style="color:white">&nbsp;&nbsp;Toggle Catagorys:</p>
-            <center>
-                <button class="button" onClick="showHide('NedApp')">NedApps</button><br><br>
-                <button class="button" onClick="showHide('SocialMedia')">SocialMedia</button><br><br>
-                <button class="button" onClick="showHide('Kids')">Kids</button><br><br>
-                <button class="button" onClick="showHide('Outher')">Outher</button><br><br>
-                <button class="button" onClick="showHide('Email')">Email</button><br>
-            </center>
-		</div>
-		
-		<!-- Menu button -->
-		<div id="menuToggle">Settings</div>
-	</div>
-    <center class="HTML5Center">
-		<img class="right logo" src="https://clipartion.com/wp-content/uploads/2015/12/koala-clipart-koala-clipart.png" width="200" height="75" alt="KoalaHome Logo">
-		<img class="left logo" src="http://i.imgur.com/AP5imrD.png" width="200" height="75" alt="NedHome Face Logo">
-        <div class="bricks">
-            <script>
-				var nedver = "4.1-KOALA";
-			
-                b("NedApp", "Google", "nedhome.ml/tools/google");
-                b("NedApp", "Yahoo", "nedhome.ml/tools/google?yahoo");
-                b("NedApp", "Calculator", "nedhome.ml/tools/calculator");
-                b("NedApp", "Clock", "nedhome.ml/tools/clock");
-                b("NedApp", "$ Converter", "nedhome.ml/tools/moneyconverter");
-                b("NedApp", "Holidays", "nedhome.ml/tools/holidays");
-                b("NedApp", "Radio", "nedhome.ml/tools/radio");
-                b("NedApp", "Tv", "nedhome.ml/tools/tv");
-                b("NedApp", "Piano", "nedhome.ml/tools/piano");
-   
-                document.write('<br>');
-   
-                b("SocialMedia", "Facebook", "facebook.com");
-                b("SocialMedia", "Twitter", "twitter.com");
-                b("SocialMedia", "Youtube", "youtube.com");
-                b("SocialMedia", "Flickr", "flickr.com");
-                b("SocialMedia", "Google+", "plus.google.com");
-                b("SocialMedia", "Imgur", "imgur.com");
-                b("SocialMedia", "Yahoo A.", "answers.yahoo.com");
-                b("SocialMedia", "Snapchat", "snapchat.com");
-                b("SocialMedia", "Instagram", "instagram.com");
-    
-                document.write('<br>');
-   
-                b("Kids", "Disney", "disney.com");
-                b("Kids", "Nick", "nick.com");
-                b("Kids", "CN", "cartoonnetwork.com");
-                b("Kids", "KidRex", "nedhome.ml/tools/google?kids");
-                b("Kids", "GamesFreak", "gamesfreak.net");
-                b("Kids", "Minecraft", "www.minecraft.net");
-                b("Kids", "PBS", "pbskids.org");
-                b("Kids", "CoolMath", "www.coolmath-games.com")
-                b("Kids", "Poptropica", "www.poptropica.com");
-                b("Kids", "FunBrain", "www.funbrain.com");
-                b("Kids", "Pogo", "pogo.com");
+	<body>
+        <center class="HTML5Center">
+            <img class="right logo" src="https://clipartion.com/wp-content/uploads/2015/12/koala-clipart-koala-clipart.png" width="200" height="75" alt="Logo">
+            <img class="left logo" src="http://i.imgur.com/AP5imrD.png" width="200" height="75" alt="NedHome Face Logo">
+            <div class="bricks">
+                <div id="sites"></div>
+                <br>
+            </div>
+        </center>
 
-                document.write('<br>');
-   
-                b("Outher", "Weebly", "weebly.com");
-                b("Outher", "CCleaner", "ccleaner.com");
-                b("Outher", "Microsoft", "microsoft.com");
-                b("Outher", "Wikipedia", "wikipedia.org");
-                b("Outher", "GitHub", "github.com");
-                b("Outher", "Netflix", "netflix.com");
-                b("Outher", "eBay", "ebay.com");
-                b("Outher", "ZunoZap", "zunozap.github.io");
-    
-                document.write('<br>');
-    
-                b("Email", "Gmail", "gmail.com");
-                b("Email", "Yahoo Mail", "yahoo.com");
-    
-                function b(type, name, url) {
-					var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();				
-                    var text = '<a href="http://'+url+'" class="'+type+' oldbutton">'+name+
-                               '    <br>' +
-                               '    <small class="small">'+type+'</small><br>' +
-                               '    <img src="images/'+type.toString().toLowerCase()+'/'+image+'.png" alt="'+name+'" width="70" height="55">'+
-                               '</a>'
-                    document.write(text);
-                }
+        <div id="c">
+            <div class="container">
+                <div class="bottom-right">
+                    <p>NedHome, Your New Home Page!<br>Onassis theme by Carlos Alvarez at BLACKTIE.CO</p>
+                </div>
+                <div class="bottom-left">
+                    <p>Toggle Catagorys:<br>
+                        <button class="button" onClick="showHide('NedApp')">NedApps</button>
+                        <button class="button" onClick="showHide('SocialMedia')">SocialMedia</button>
+                        <button class="button" onClick="showHide('Kids')">Kids</button>
+                        <button class="button" onClick="showHide('Outher')">Outher</button>
+                        <button class="button" onClick="showHide('Email')">Email</button>
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </div>    
 
-                function showHide(type) {
-                    var x = document.getElementsByClassName(type);
-                    var i;
-                    for (i = 0; i < x.length; i++) {
-                        if (x[i].style.display == "none") {
-                            x[i].style.display = "inline-block";
-                        } else {
-                            x[i].style.display = "none";
-                        }
-                    }
-                }
-            </script>
-			<br><br>
-        </div>
-    </center>
+        <!-- Bootstrap core JavaScript, Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="https://zunozap.github.io/assets/js/modernizr.custom.js"></script>
 
-	<div id="c">
-		<div class="container">
-            <p>NedHome (aka Ned), Your New Home Page! (v<script>document.write(nedver);</script>)
-			<br>Site Theme by: BLACKTIE.CO, using the Onassis theme by Carlos Alvarez</p>
-		</div>
-	</div>    
-
-    <!-- Bootstrap core JavaScript, Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="https://zunozap.github.io/assets/js/modernizr.custom.js"></script>
-    
-    <script type="text/javascript" src="https://zunozap.github.io/assets/js/classie.js"></script>
-    <script type="text/javascript" src="https://zunozap.github.io/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://zunozap.github.io/assets/js/smoothscroll.js"></script>
-    <script type="text/javascript" src="https://zunozap.github.io/assets/js/main.js"></script>
-</body>
+        <script type="text/javascript" src="https://zunozap.github.io/assets/js/classie.js"></script>
+        <script type="text/javascript" src="https://zunozap.github.io/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://zunozap.github.io/assets/js/smoothscroll.js"></script>
+        <script type="text/javascript" src="https://zunozap.github.io/assets/js/main.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
 </html>

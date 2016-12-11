@@ -1,14 +1,14 @@
-*        { padding: 0px; margin: 0px;}
-.center  { float: center; text-align: center; }
-.small   { font-size: 12px; }
-h1,h2,h3 { float: center; text-align: center; }
+*              { padding: 0px; margin: 0px; }
+.center        { text-align: center;        }
+.small         { font-size: 12px;           }
+h1,h2,h3       { text-align: center;        }
+.bottom-left   { float: left;               }
+.bottom-left p { text-align: left;          }
+.bottom-right  { float: right;              }
 
-#NedTool        { display: inline-block; }
-#KoalaTool, #NedTool { display: inline-block; }
-#Outher              { display: inline-block; }
-#SocialMedia         { display: inline-block; }
-#Kids                { display: inline-block; }
-#Email               { display: inline-block; }
+#NedTool, #KoalaTool, #Outher, #SocialMedia, #Kids, #Email { 
+    display: inline-block; 
+}
 
 .bricks, #bricks {
     background-color: silver;
@@ -22,29 +22,25 @@ h1,h2,h3 { float: center; text-align: center; }
     padding-top: 2px;
 }
 
-a           { padding: 4px; margin: 1px; border: 2px blue solid; text-decoration: none; color: black; font-size: 18px; display: inline-block; }
-button.cat  { padding: 2px; padding-left: 3px; padding-right: 3px; margin: 1px; color: black; background-color: teal; display: inline-block; }
-a:hover     { background-color: transparent; }
+a           { padding: 4px; margin: 1px; border: 2px blue solid; text-decoration: none; color: black; font-size: 17px; display: inline-block; }
+a:hover     { text-decoration: none; color: gray; }
 #banner     { display: block; background-color: teal; color: white; margin-bottom: 1px;}
-#menuToggle { width: 60px; margin-top: 60px; }
 
 @media screen and (orientation:landscape) {
 	.right.logo { text-align: right; float: right; margin-right: 5px; }
 	.left.logo  { text-align: left; float: left;   margin-left:  5px; }
-	.logo       { background: rgba(0,0,0,0.6); border: 1px solid rgba(0,0,0,0.7); padding: 2px; width: 170px; height: 75px; }
+	.logo       { background: rgba(0,0,0,0.45); border: 1px solid rgba(0,0,0,0.5); padding: 2px; width: 170px; height: 75px; }
 }
 @media screen and (orientation:portrait) {
-	.right.logo {}
-	.left.logo  {}
 	.logo       { width: 100px; height: 50px; }
 }
 
-.oldbutton, .button {
+.button {
     background-color:rgba(255, 170, 0, 0.97);/*Old: #ffec64;*/
     
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
 
     border:1px solid #ffaa22;
     display:inline-block;
@@ -58,7 +54,7 @@ a:hover     { background-color: transparent; }
     padding:4px 5px;
     text-decoration:none;
 }
-.oldbutton:hover {
+.button:hover {
     background-color: orange;
     text-decoration: none;
 }
