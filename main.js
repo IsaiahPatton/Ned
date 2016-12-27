@@ -1,6 +1,6 @@
 var OL = 0, num = 0, nameArray = [], typeArray = [], urlArray = [], numOnEveryLine = null;
 var sites = document.getElementById("sites");
-var nedhome = window.location.href;
+var nedhome = "n-e-d.github.io";
 
 /* Catagory: NedApp/NedTools */
 sites.innerHTML = sites.innerHTML + "<br>";
