@@ -1,17 +1,18 @@
 var OL = 0, num = 0, nameArray = [], typeArray = [], urlArray = [], numOnEveryLine = null;
 var sites = document.getElementById("sites");
+var nedhome = window.location.href;
 
 /* Catagory: NedApp/NedTools */
 sites.innerHTML = sites.innerHTML + "<br>";
-b("NedApp", "Google", "nedhome.ml/tools/google");
-b("NedApp", "Yahoo", "nedhome.ml/tools/google?yahoo");
-b("NedApp", "Calculator", "nedhome.ml/tools/calculator");
-b("NedApp", "Clock", "nedhome.ml/tools/clock");
-b("NedApp", "$ Converter", "nedhome.ml/tools/moneyconverter");
-b("NedApp", "Holidays", "nedhome.ml/tools/holidays");
-b("NedApp", "Radio", "nedhome.ml/tools/radio");
-b("NedApp", "Tv", "nedhome.ml/tools/tv");
-b("NedApp", "Piano", "nedhome.ml/tools/piano");
+b("NedApp", "Google", nedhome+"/tools/google");
+b("NedApp", "Yahoo", nedhome+"/tools/google?yahoo");
+b("NedApp", "Calculator", nedhome+"/tools/calculator");
+b("NedApp", "Clock", nedhome+"/tools/clock");
+b("NedApp", "$ Converter", nedhome+"/tools/moneyconverter");
+b("NedApp", "Holidays", nedhome+"/tools/holidays");
+b("NedApp", "Radio", nedhome+"/tools/radio");
+b("NedApp", "Tv", nedhome+"/tools/tv");
+b("NedApp", "Piano", nedhome+"/tools/piano");
 
 /* Catagory: SocialMedia */
 sites.innerHTML = sites.innerHTML + "<br>";
