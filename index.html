@@ -11,14 +11,18 @@
 		<!-- Stylesheets -->
 		<link href="koalahome-main.css" rel="stylesheet" type="text/css">
 		
-		<link type="text/css" rel="stylesheet" href="https://isaiahpatton.github.io/stylesheets/OnassisMain.cssOLD">
 		<link type="text/css" rel="stylesheet" href="https://isaiahpatton.github.io/stylesheets/fontStyles.css">
 		
-		<link type="text/css" rel="stylesheet" href="https://zunozap.github.io/assets/css/font-awesome.min.css">
-		<link type="text/css" rel="stylesheet" href="https://zunozap.github.io/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-orange.css">
+
+		<!--<link type="text/css" rel="stylesheet" href="https://zunozap.github.io/assets/css/font-awesome.min.css">
+		<link type="text/css" rel="stylesheet" href="https://zunozap.github.io/assets/css/bootstrap.css">-->
 	
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel='stylesheet' type='text/css'>
 		<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/cosmo/bootstrap.min.css">
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -26,9 +30,30 @@
 			<script src="https://zunozap.github.io/assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-  
+
 	<body>
-        <center class="HTML5Center">
+        <nav class="navbar navbar-inverse" style="margin:0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">NedHome</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/games">Games</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <center class="w3-center">
             <img class="right logo" src="https://clipartion.com/wp-content/uploads/2015/12/koala-clipart-koala-clipart.png" width="200" height="75" alt="Logo">
             <img class="left logo" src="http://i.imgur.com/AP5imrD.png" width="200" height="75" alt="NedHome Face Logo">
             <div class="bricks">
@@ -37,10 +62,13 @@
             </div>
         </center>
 
-        <div id="c">
+        <div class="footer">
             <div class="container">
                 <div class="bottom-right">
-                    <p>NedHome, Your New Home Page!<br>Onassis theme by Carlos Alvarez at BLACKTIE.CO</p>
+                    <p>
+                        NedHome, Your New Home Page!
+                        <a class="github-button" href="https://github.com/n-e-d/n-e-d.github.io/issues" data-icon="octicon-issue-opened" aria-label="Issue ntkme/github-buttons on GitHub">Report Issue</a>
+                    </p>
                 </div>
                 <div class="bottom-left">
                     <p>Toggle Catagorys:<br>
@@ -53,7 +81,30 @@
                     <br>
                 </div>
             </div>
-        </div>    
+        </div>
+        
+        <!-- Search -->
+        <div id="search" class="w3-modal">
+            <div class="w3-modal-content w3-card-8 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <span onclick="document.getElementById('search').style.display='none'" class="w3-closebtn">X</span><h4>Search</h4>
+                </header>
+                <div class="w3-padding w3-center">
+                    <br><img src="search.png">
+                    <form method="get" action="http://www.google.com/search" id="form" class="w3-center">
+                        <input class="searchText w3-center" id="input" type="text" name="q" size="30" maxlength="255" value="" placeholder="Enter text here" />
+                        <input class="w3-center" id="buttonText" type="submit" value="Google Search" />
+                    </form>
+                    <br>
+                    <p>Switch:
+                        <button class="searchSwitch" onClick="switchSearch('Google', 'http://www.google.com/search', 'q')">Google</button>
+                        <button class="searchSwitch" onClick="switchSearch('KidRex', 'http://www.kidrex.org/results/', 'q')">Kid safe Google</button>
+                        <button class="searchSwitch" onClick="switchSearch('Yahoo', 'http://www.yahoo.com/search', 'p')">Yahoo</button>
+                    </p>
+                </div>
+                <footer class="w3-container w3-theme-l1"><br><p>This site is not affiliated with any of the search engines provided</p></footer>
+            </div>
+        </div>
 
         <!-- Bootstrap core JavaScript, Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
@@ -64,5 +115,6 @@
         <script type="text/javascript" src="https://zunozap.github.io/assets/js/smoothscroll.js"></script>
         <script type="text/javascript" src="https://zunozap.github.io/assets/js/main.js"></script>
         <script type="text/javascript" src="main.js"></script>
+        <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     </body>
 </html>
