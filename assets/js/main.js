@@ -61,7 +61,7 @@ function b(type, name, url, jsCode) {
     num++;
 
     var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
-    var text = '<a href="http://'+url+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
+    var text = '<a href="http://'+url+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
 
     document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
 }
@@ -70,7 +70,7 @@ function bJS(type, name, jsCode) {
     num++;
 
     var image = name.toString().replace(" ", "-").toLowerCase();
-    var text = '<a href="#" onClick="'+jsCode+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
+    var text = '<a href="#" onClick="'+jsCode+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
 
     document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
 }
