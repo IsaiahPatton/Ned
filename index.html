@@ -35,12 +35,19 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/games">Games</a></li>
-                    </ul>
+                    <form id="web-search" class="navbar-form navbar-right" method="get" action="http://www.google.com/search">
+                        <div class="form-group">
+                            <input id="WS-TXT" type="text" class="form-control" name="q" size="35" placeholder="Search" maxlength="255" value="" />
+                        </div>
+                        <input id="searchValue" class="btn btn-default" type="submit" value="Google"
+                        onClick="switchSearch('Google', 'https://www.google.com/search', 'q');" />
+                        <input id="searchValue" class="btn btn-default" type="submit" value="Yahoo!"
+                        onClick="switchSearch('Yahoo', 'https://www.yahoo.com/search', 'p');" />
+                        <input id="searchValue" class="btn btn-default" type="submit" value="KidRex"
+                        onClick="switchSearch('KidRex', 'http://www.kidrex.org/results/', 'q');" />
+                    </form>
                 </div>
+                
             </div>
         </nav>
         <center class="w3-center">
@@ -98,12 +105,6 @@
 
         <!-- Bootstrap core JavaScript, Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="https://zunozap.github.io/assets/js/modernizr.custom.js"></script>
-
-        <script type="text/javascript" src="https://zunozap.github.io/assets/js/classie.js"></script>
-        <script type="text/javascript" src="https://zunozap.github.io/assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://zunozap.github.io/assets/js/smoothscroll.js"></script>
-        <script type="text/javascript" src="https://zunozap.github.io/assets/js/main.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     </body>
