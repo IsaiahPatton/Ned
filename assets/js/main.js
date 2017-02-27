@@ -4,8 +4,6 @@ var nedhome = "n-e-d.github.io";
 
 /* Catagory: NedApp/NedTools */
 sites.innerHTML = sites.innerHTML + "<br>";
-//bJS("NedApp", "Google", "switchSearch('Google', 'http://www.google.com/search', 'q');");
-//bJS("NedApp", "Yahoo", "switchSearch('Yahoo', 'http://www.yahoo.com/search', 'p');");
 b("NedApp", "Calculator", nedhome+"/tools/calculator");
 b("NedApp", "Clock", nedhome+"/tools/clock");
 b("NedApp", "$ Converter", nedhome+"/tools/moneyconverter");
@@ -31,7 +29,6 @@ sites.innerHTML = sites.innerHTML + "<br>";
 b("Kids", "Disney", "disney.com");
 b("Kids", "Nick", "nick.com");
 b("Kids", "CN", "cartoonnetwork.com");
-//bJS("Kids", "KidRex", "switchSearch('KidRex', 'http://www.kidrex.org/results/', 'q');");
 b("Kids", "GamesFreak", "gamesfreak.net");
 b("Kids", "Minecraft", "www.minecraft.net");
 b("Kids", "PBS", "pbskids.org");
@@ -88,36 +85,11 @@ function showHide(type) {
 }
 
 function switchSearch(name, url, a) {
-    //document.getElementById('search').style.display = 'block'; 
-    
     document.getElementById("form").action = url;
     document.getElementById("web-search").action = url;
-    
+
     document.getElementById("input").name = a;
     document.getElementById("WS-TXT").name = a;
-    
-    //document.getElementById("buttonText").value = name + " Search";
-    //document.getElementById("searchValue").value = name + " Search";
-}
-
-function loadPage(url) {
-    var xmlhttp;
-    if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-    } else {
-        // code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function(){
-        if (true || xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("all").innerHTML = xmlhttp.responseText;
-        }
-
-        document.getElementById("alltools").style.display = 'block'; 
-    }
-    xmlhttp.open("GET", "tools/"+url+".html", true);
-    xmlhttp.send();
 }
 
 if (window.innerWidth < 600) {
