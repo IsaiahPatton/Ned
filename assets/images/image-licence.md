@@ -1,4 +1,4 @@
-All images were found on Google having `Usage Rights` set to `LABLED FOR REUSE`
+All images were found on Google having `Usage Rights` set to `LABLED FOR REUSE` and aren't licenced under GPLv3.
 
 Example:
 

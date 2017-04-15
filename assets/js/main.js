@@ -85,11 +85,54 @@ function showHide(type) {
 }
 
 function switchSearch(name, url, a) {
-    document.getElementById("form").action = url;
     document.getElementById("web-search").action = url;
-
-    document.getElementById("input").name = a;
     document.getElementById("WS-TXT").name = a;
+}
+function setCookie(cname,cvalue) {
+    var d = new Date();
+    d.setTime(d.getTime() + (30*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(cook) {
+    var user=getCookie(cook);
+    if (user != "") {
+        return true;
+    } else {
+       return false;
+    }
+    return false;
+}
+
+function switchS(name, url, a){
+    setCookie("searchone", name);
+    setCookie("searchtwo", url);
+    setCookie("searchthree", a);
+    switchSearch(name, url, a);
+}
+
+function open(menu) {
+    document.getElementById(menu).style.display = "inline-block";
+}
+
+if (window.location.href.toString().includes("nedhome")){
+    document.getElementById("infobar").style.display = "block";
 }
 
 if (window.innerWidth < 600) {
@@ -100,4 +143,12 @@ if (window.innerWidth < 600) {
     }
 }
 
+function searchbar(){
+        document.getElementById("nocook").style.display = "none";
+        document.getElementById("nhcooke").style.display = "inline-block";
+        if (checkCookie("searchone")) {
+            switchSearch(getCookie("searchone"), getCookie("searchtwo"), getCookie("searchthree"));
+        }
+}
 
+searchbar();

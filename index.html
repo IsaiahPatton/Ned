@@ -22,6 +22,11 @@
     </head>
 
     <body>
+        <div class="infobar" id="infobar">
+            <div class="right" onClick="document.getElementById('infobar').style.display = 'none'">X</div>
+            <b>WARRNING:</b> Starting January 1st, 2018 The domain <a href="http://nedhome.ml">nedhome.ml</a> will nolonger be used.<br>
+            Please update your bookmarks to <a href="/">n-e-d.github.io</a>
+        </div>
         <nav class="navbar navbar-inverse" style="margin:0px;">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -32,6 +37,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/">NedHome</a>
+                    <a class="w3-center btn btn-default" href="javascript:open('settings')">Settings</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -39,12 +45,18 @@
                         <div class="form-group">
                             <input id="WS-TXT" type="text" class="form-control" name="q" size="35" placeholder="Search" maxlength="255" value="" />
                         </div>
-                        <input id="searchValue" class="btn btn-default" type="submit" value="Google"
-                        onClick="switchSearch('Google', 'https://www.google.com/search', 'q');" />
-                        <input id="searchValue" class="btn btn-default" type="submit" value="Yahoo!"
-                        onClick="switchSearch('Yahoo', 'https://www.yahoo.com/search', 'p');" />
-                        <input id="searchValue" class="btn btn-default" type="submit" value="KidRex"
-                        onClick="switchSearch('KidRex', 'http://www.kidrex.org/results/', 'q');" />
+                        <span class="nocook" id="nocook">
+                            <input id="searchValue" class="btn btn-default" type="submit" value="Google"
+                            onClick="switchSearch('Google', 'https://www.google.com/search', 'q');" />
+                            <input id="searchValue" class="btn btn-default" type="submit" value="Yahoo!"
+                            onClick="switchSearch('Yahoo', 'https://www.yahoo.com/search', 'p');" />
+                            <input id="searchValue" class="btn btn-default" type="submit" value="KidRex"
+                            onClick="switchSearch('KidRex', 'http://www.kidrex.org/results/', 'q');" />
+                            <input id="searchValue" class="btn btn-default" type="submit" onClick="switchSearch('DuckDuckGo', 'https://www.duckduckgo.com/', 'q');" value="DuckDuckGo" />
+                        </span>
+                        <span class="nh-cooke" id="nhcooke">
+                            <input id="searchValue" class="btn btn-default" type="submit" value="Search">
+                        </span>
                     </form>
                 </div>
                 
@@ -63,7 +75,6 @@
             <div class="container">
                 <div class="bottom-right">
                     <p>
-                        NedHome, Your New Home Page!
                         <a class="github-button" href="https://github.com/n-e-d/n-e-d.github.io/issues" data-icon="octicon-issue-opened" aria-label="Issue NedHome on GitHub">Report Issue</a>
                     </p>
                 </div>
@@ -80,30 +91,27 @@
             </div>
         </div>
         
-        <!-- Search -->
-        <div id="search" class="w3-modal">
+        <!-- Settings -->
+        <div id="settings" class="w3-modal">
             <div class="w3-modal-content w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
-                    <span onclick="document.getElementById('search').style.display='none'" class="w3-closebtn">X</span><h4>Search</h4>
+                    <span onclick="document.getElementById('settings').style.display='none'" class="w3-closebtn">X</span><h4>NedHome v5 Settings</h4>
                 </header>
                 <div class="w3-padding w3-center">
-                    <br><img src="assets/images/search.png">
-                    <form method="get" action="http://www.google.com/search" id="form" class="w3-center">
-                        <input class="searchText w3-center" id="input" type="text" name="q" size="30" maxlength="255" value="" placeholder="Enter text here" />
-                        <input class="w3-center" id="buttonText" type="submit" value="Google Search" />
-                    </form>
+                <br>
                     <br>
-                    <p>Switch:
-                        <button class="searchSwitch" onClick="switchSearch('Google', 'http://www.google.com/search', 'q')">Google</button>
-                        <button class="searchSwitch" onClick="switchSearch('KidRex', 'http://www.kidrex.org/results/', 'q')">Kid safe Google</button>
-                        <button class="searchSwitch" onClick="switchSearch('Yahoo', 'http://www.yahoo.com/search', 'p')">Yahoo</button>
+                    <p>Search Engine:
+                        <button class="searchSwitch" onClick="switchS('Google', 'http://www.google.com/search', 'q')">Google</button>
+                        <button class="searchSwitch" onClick="switchS('KidRex', 'http://www.kidrex.org/results/', 'q')">Kid safe Google</button>
+                        <button class="searchSwitch" onClick="switchS('DuckDuckGo', 'https://www.duckduckgo.com/', 'q')">DuckDuckGo</button>
+                        <button class="searchSwitch" onClick="switchS('Yahoo', 'http://www.yahoo.com/search', 'p')">Yahoo</button><br>
+                        <small>This site is not affiliated with any of the search engines provided</small>
                     </p>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p>This site is not affiliated with any of the search engines provided</p></footer>
+                <footer class="w3-container w3-theme-l1"><br><p>Site v5.0.17154</p></footer>
             </div>
         </div>
 
-        <!-- Bootstrap core JavaScript, Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>

@@ -4,7 +4,10 @@
  * Author: Isaiah Patton
  * URL: https://n-e-d.github.io/
  **/
-
+html {
+    margin: 0;
+}
+ 
 .center        { text-align: center; }
 .small         { font-size: 10.9px;    }
 h1,h2,h3       { text-align: center; }
@@ -93,4 +96,32 @@ nav a {
 .transparent {
     background-color: transparent;
     border-color: transparent;
+}
+
+.infobar {
+    display: none;
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    padding-top: 0;
+}
+.infobar .right {
+    text-align: right;
+}
+.infobar a {
+    color: lightblue;
+    border: 0;
+}
+.infobar a:hover {
+    color: white;
+    background-color: black;
+    
+}
+.nocook {
+    display: inline-block;
+}
+.nh-cooke {
+    display: none;
 }
