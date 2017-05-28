@@ -1,4 +1,3 @@
-var OL = 0, num = 0, numOnEveryLine = null;
 var sites = document.getElementById("sites");
 var nedhome = "n-e-d.github.io";
 
@@ -55,8 +54,6 @@ b("Email", "Yahoo Mail", "yahoo.com");
 b("Email", "Outlook", "outlook.com");
 
 function b(type, name, url, jsCode) {
-    num++;
-
     var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
     var text = '<a href="http://'+url+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
 
@@ -64,8 +61,6 @@ function b(type, name, url, jsCode) {
 }
 
 function bJS(type, name, jsCode) {
-    num++;
-
     var image = name.toString().replace(" ", "-").toLowerCase();
     var text = '<a href="#" onClick="'+jsCode+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
 
@@ -139,16 +134,37 @@ if (window.innerWidth < 600) {
     var x = document.getElementsByClassName("button");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.padding = "4px 3px";
+        x[i].style.padding = "3px 2px";
     }
 }
 
-function searchbar(){
+function advancedsearch(tagname) {
+    if (getCookie("advancedsearch").toString().includes("disable")) {
+        searchbar(true);
+        document.getElementById("ase").style.display = "none";
+        document.getElementById("asd").style.display = "inline-block";
+        setCookie("advancedsearch", "enabled");
+    } else {
+        document.getElementById("nocook").style.display = "inline-block";
+        document.getElementById("nhcooke").style.display = "none";
+        document.getElementById("asd").style.display = "none";
+        document.getElementById("ase").style.display = "inline-block";
+        setCookie("advancedsearch", "disabled");
+    }
+}
+
+function searchbar(startup){
+    if (getCookie("advancedsearch").toString().includes("enable") || startup || window.location.protocol == "file:") {
         document.getElementById("nocook").style.display = "none";
         document.getElementById("nhcooke").style.display = "inline-block";
         if (checkCookie("searchone")) {
             switchSearch(getCookie("searchone"), getCookie("searchtwo"), getCookie("searchthree"));
         }
+    }
 }
 
-searchbar();
+if (!checkCookie("advancedsearch")) {
+    setCookie("advancedsearch", "enabled");
+}
+
+searchbar(false);
