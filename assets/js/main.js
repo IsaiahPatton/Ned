@@ -3,7 +3,7 @@ var nedhome = "n-e-d.github.io";
 
 /* Catagory: NedApp/NedTools */
 sites.innerHTML = sites.innerHTML + "<br>";
-b("NedApp", "Calculator", nedhome+"/tools/calculator");
+bJS("NedApp", "Calculator", "document.getElementById('calc').style.display = 'inline-block'");
 b("NedApp", "Clock", nedhome+"/tools/clock");
 b("NedApp", "$ Converter", nedhome+"/tools/moneyconverter");
 b("NedApp", "Holidays", nedhome+"/tools/holidays");
