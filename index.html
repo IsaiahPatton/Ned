@@ -6,18 +6,17 @@
         <meta name="description" content="NedHome, Ned">
         <meta name="author" content="Isaiah Patton">
 
-        <title>Ned!</title>
-    
+        <title>NedHome</title>
+
         <!-- Stylesheets -->
-        <link type="text/css" rel="stylesheet" href="https://isaiahpatton.github.io/stylesheets/fontStyles.css">
-        
+        <link rel="stylesheet" href="assets/css/fontStyles.css" type="text/css" >
         <link rel="stylesheet" href="assets/css/w3.css" type="text/css">
         <link rel="stylesheet" href="assets/css/w3-orange.css" type="text/css">
         <link rel="stylesheet" href="assets/css/main.css" type="text/css">
 
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel='stylesheet' type='text/css'>
-        
+
         <link rel="stylesheet" type="text/css" href="https://bootswatch.com/cosmo/bootstrap.min.css">
     </head>
 
@@ -95,7 +94,8 @@
         <div id="settings" class="w3-modal">
             <div class="w3-modal-content w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
-                    <span onclick="document.getElementById('settings').style.display='none'" class="w3-closebtn">X</span><h4>NedHome v5 Settings</h4>
+                    <span onclick="document.getElementById('settings').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h4>NedHome v5 Settings</h4>
                 </header>
                 <div class="w3-padding w3-center">
                     <br>
@@ -104,7 +104,7 @@
                         <input type="button" name="avs" id="asd" value="enabled" onClick="advancedsearch('disable')" />
                         <small>click to change</small>
                     </p>
-                    <p>Search Engine:
+                    <p id="advancedsearche">Search Engine:
                         <button class="searchSwitch" onClick="switchS('Google', 'http://www.google.com/search', 'q')">Google</button>
                         <button class="searchSwitch" onClick="switchS('KidRex', 'http://www.kidrex.org/results/', 'q')">Kid safe Google</button>
                         <button class="searchSwitch" onClick="switchS('DuckDuckGo', 'https://www.duckduckgo.com/', 'q')">DuckDuckGo</button>
@@ -112,9 +112,44 @@
                         <small>This site is not affiliated with any of the search engines provided</small>
                     </p>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p>Site v5.0.17275</p></footer>
+                <footer class="w3-container w3-theme-l1"><br><p>Site v5.0.17295</p></footer>
             </div>
         </div>
+        
+        <!-- Piano -->
+        <div id="piano" class="w3-modal">
+            <div class="w3-modal-content w3-card-8 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <span onclick="document.getElementById('piano').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h5>Piano</h5>
+                </header>
+                <div class="w3-center">
+                    <br>
+                    <!--<script type="text/javascript" src="http://100widgets.com/js_data.php?id=228"></script><!--Piano-->
+                    <object width="700" height="167">
+                        <param name="movie" value="http://www.buttonbass.com/images/blacknyellow700.swf">
+                        <param name="wmode" value="transparent">
+                        <embed src="http://www.buttonbass.com/images/blacknyellow700.swf" type="application/x-shockwave-flash" wmode="transparent" width="700" height="167"></embed></object><br>
+                    <br>
+                    <p>Not working? Try the old version <a href="tools/piano.html">here</a></p>
+                </div>
+                <footer class="w3-container w3-theme-l1"><br><p>Site v5.0.17295</p></footer>
+            </div>
+        </div>
+        
+        <!-- Tv -->
+        <div id="tv" class="w3-modal">
+            <div class="w3-modal-content w3-card-8 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <span onclick="document.getElementById('tv').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h5>Legal Free Tv</h5>
+                </header>
+                <div class="w3-center">
+                    <script type="text/javascript" src="http://100widgets.com/js_data.php?id=241"></script>
+                    Not working? Try the old version <a href="tools/tv.html">here</a>
+                </div>
+                <footer class="w3-container w3-theme-l1">Site v5.0.17295</footer>
+            </div>
 
         <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>

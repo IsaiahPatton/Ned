@@ -8,8 +8,8 @@ b("NedApp", "Clock", nedhome+"/tools/clock");
 b("NedApp", "$ Converter", nedhome+"/tools/moneyconverter");
 b("NedApp", "Holidays", nedhome+"/tools/holidays");
 b("NedApp", "Radio", nedhome+"/tools/radio");
-b("NedApp", "Tv", nedhome+"/tools/tv");
-b("NedApp", "Piano", nedhome+"/tools/piano");
+bJS("NedApp", "Tv", "document.getElementById('tv').style.display = 'inline-block'");
+bJS("NedApp", "Piano", "document.getElementById('piano').style.display = 'inline-block'");
 
 /* Catagory: SocialMedia */
 sites.innerHTML = sites.innerHTML + "<br>";
@@ -143,12 +143,14 @@ function advancedsearch(tagname) {
         searchbar(true);
         document.getElementById("ase").style.display = "none";
         document.getElementById("asd").style.display = "inline-block";
+        document.getElementById("advancedsearche").style.display = "inline-block";
         setCookie("advancedsearch", "enabled");
     } else {
         document.getElementById("nocook").style.display = "inline-block";
         document.getElementById("nhcooke").style.display = "none";
         document.getElementById("asd").style.display = "none";
         document.getElementById("ase").style.display = "inline-block";
+        document.getElementById("advancedsearche").style.display = "none";
         setCookie("advancedsearch", "disabled");
     }
 }
