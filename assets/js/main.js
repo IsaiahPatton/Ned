@@ -10,6 +10,9 @@ b("NedApp", "Holidays", nedhome+"/tools/holidays");
 b("NedApp", "Radio", nedhome+"/tools/radio");
 bJS("NedApp", "Tv", "document.getElementById('tv').style.display = 'inline-block'");
 bJS("NedApp", "Piano", "document.getElementById('piano').style.display = 'inline-block'");
+bJS("NedApp", "Translator", "document.getElementById('translator').style.display = 'inline-block'");
+bJS("NedApp", "QR code creator", "document.getElementById('qrgen').style.display = 'inline-block'");
+bJS("NedApp", "URL Shortner", "document.getElementById('urlshort').style.display = 'inline-block'")
 
 /* Catagory: SocialMedia */
 sites.innerHTML = sites.innerHTML + "<br>";
@@ -61,7 +64,7 @@ function b(type, name, url, jsCode) {
 }
 
 function bJS(type, name, jsCode) {
-    var image = name.toString().replace(" ", "-").toLowerCase();
+    var image = name.toString().replace(new RegExp(" ", 'g'), "-").toLowerCase();
     var text = '<a href="#" onClick="'+jsCode+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
 
     document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
