@@ -1,18 +1,34 @@
 var sites = document.getElementById("sites");
 var nedhome = "n-e-d.github.io";
 
+function b(type, name, url) {
+    "use strict";
+    var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
+    var text = '<a href="http://' + url + '" class="' + type + ' button">' + name + "<br>" + '<small class="small">' + type + "</small><br>" + '<img src="assets/images/' + type.toString().toLowerCase() + "/" + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
+
+    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
+}
+
+function bJS(type, name, jsCode) {
+    "use strict";
+    var image = name.toString().replace(new RegExp(" ", 'g'), "-").toLowerCase();
+    var text = '<a href="javascript:open(\'' + jsCode + '\');" class="' + type + ' button">' + name + "<br>" + '<small class="small">' + type + "</small><br>" + '<img src="assets/images/' + type.toString().toLowerCase() + "/" + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
+
+    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
+}
+
 /* Catagory: NedApp/NedTools */
 sites.innerHTML = sites.innerHTML + "<br>";
-bJS("NedApp", "Calculator", "document.getElementById('calc').style.display = 'inline-block'");
-b("NedApp", "Clock", nedhome+"/tools/clock");
-b("NedApp", "$ Converter", nedhome+"/tools/moneyconverter");
-b("NedApp", "Holidays", nedhome+"/tools/holidays");
-b("NedApp", "Radio", nedhome+"/tools/radio");
-bJS("NedApp", "Tv", "document.getElementById('tv').style.display = 'inline-block'");
-bJS("NedApp", "Piano", "document.getElementById('piano').style.display = 'inline-block'");
-bJS("NedApp", "Translator", "document.getElementById('translator').style.display = 'inline-block'");
-bJS("NedApp", "QR code creator", "document.getElementById('qrgen').style.display = 'inline-block'");
-bJS("NedApp", "URL Shortner", "document.getElementById('urlshort').style.display = 'inline-block'")
+// Replaced on main screen: bJS("NedApp", "Calculator", "calc");
+// Replaced on main screen: b("NedApp", "Clock", nedhome + "/tools/clock");
+b("NedApp", "$ Converter", nedhome + "/tools/moneyconverter");
+b("NedApp", "Holidays", nedhome + "/tools/holidays");
+b("NedApp", "Radio", nedhome + "/tools/radio");
+bJS("NedApp", "Tv", "tv");
+bJS("NedApp", "Piano", "piano");
+bJS("NedApp", "Translator", "translator");
+bJS("NedApp", "QR code creator", "qrgen");
+// Replaced on main screen: bJS("NedApp", "URL Shortner", "urlshort");
 
 /* Catagory: SocialMedia */
 sites.innerHTML = sites.innerHTML + "<br>";
@@ -34,7 +50,7 @@ b("Kids", "CN", "cartoonnetwork.com");
 b("Kids", "GamesFreak", "gamesfreak.net");
 b("Kids", "Minecraft", "www.minecraft.net");
 b("Kids", "PBS", "pbskids.org");
-b("Kids", "CoolMath", "www.coolmath-games.com")
+b("Kids", "CoolMath", "www.coolmath-games.com");
 b("Kids", "Poptropica", "www.poptropica.com");
 b("Kids", "FunBrain", "www.funbrain.com");
 b("Kids", "Pogo", "pogo.com");
@@ -56,21 +72,8 @@ b("Email", "Gmail", "gmail.com");
 b("Email", "Yahoo Mail", "yahoo.com");
 b("Email", "Outlook", "outlook.com");
 
-function b(type, name, url, jsCode) {
-    var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
-    var text = '<a href="http://'+url+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
-
-    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
-}
-
-function bJS(type, name, jsCode) {
-    var image = name.toString().replace(new RegExp(" ", 'g'), "-").toLowerCase();
-    var text = '<a href="#" onClick="'+jsCode+'" class="'+type+' button">'+name+"<br>" + '<small class="small">'+type+ "</small><br>" + '<img src="assets/images/'+type.toString().toLowerCase()+"/"+image+'.png" alt="'+name+'" width="70" height="55">' + "</a>";
-
-    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
-}
-
 function showHide(type) {
+    "use strict";
     var x = document.getElementsByClassName(type);
     var i;
     for (i = 0; i < x.length; i++) {
@@ -86,19 +89,20 @@ function switchSearch(name, url, a) {
     document.getElementById("web-search").action = url;
     document.getElementById("WS-TXT").name = a;
 }
-function setCookie(cname,cvalue) {
+function setCookie(cname, cvalue) {
+    "use strict";
     var d = new Date();
-    d.setTime(d.getTime() + (30*24*60*60*1000));
+    d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
-    document.cookie = cname+"="+cvalue+"; "+expires;
+    document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
+    for(var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') {
+        while (c.charAt(0) == ' ') {
             c = c.substring(1);
         }
         if (c.indexOf(name) == 0) {
@@ -109,7 +113,7 @@ function getCookie(cname) {
 }
 
 function checkCookie(cook) {
-    var user=getCookie(cook);
+    var user = getCookie(cook);
     if (user != "") {
         return true;
     } else {
@@ -166,6 +170,33 @@ function searchbar(startup){
             switchSearch(getCookie("searchone"), getCookie("searchtwo"), getCookie("searchthree"));
         }
     }
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var pmAm = amOrPm(h);
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var mon = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    h = twelvehour(h);
+    m = checkTime(m);
+    document.getElementById('theTime').innerHTML = days[today.getDay()] + ", " + mon[today.getMonth()] + " " + today.getDate() + ", " + h + ":" + m + " " + pmAm;
+    var t = setTimeout(startTime, 500);
+}
+
+function amOrPm(i) {
+    if (i > 12) {return "PM"};
+    return "AM";
+}
+
+function twelvehour(i) {
+    if (i > 12) { i = i - 12};
+    return i;
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
 
 if (!checkCookie("advancedsearch")) {

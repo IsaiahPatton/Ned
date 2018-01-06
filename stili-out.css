@@ -1,0 +1,162 @@
+/* http://www.calculator-1.com/outdoor/stili-out.css */
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+}
+
+.displ-out {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: #000;
+	text-align: right;
+	height: 30px;
+	width: 155px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+
+td.bt_0 {
+	background: url(knopki.gif) no-repeat -3px -7px;}
+td.bt_0:hover {
+	background: url(knopki.gif) no-repeat -3px -57px;}
+td.bt_0:active {
+	background: url(knopki.gif) no-repeat -2px -56px;}
+td.bt_1 {
+	background: url(knopki.gif) no-repeat -38px -7px;}
+td.bt_1:hover {
+	background: url(knopki.gif) no-repeat -38px -57px;}
+td.bt_1:active {
+	background: url(knopki.gif) no-repeat -37px -56px;}
+
+td.bt_2 {
+	background: url(knopki.gif) no-repeat -73px -7px;}
+td.bt_2:hover {
+	background: url(knopki.gif) no-repeat -73px -57px;}
+td.bt_2:active {
+	background: url(knopki.gif) no-repeat -72px -56px;}
+
+td.bt_3 {
+	background: url(knopki.gif) no-repeat -108px -7px;}
+td.bt_3:hover {
+	background: url(knopki.gif) no-repeat -108px -57px;}
+td.bt_3:active {
+	background: url(knopki.gif) no-repeat -107px -56px;}
+
+td.bt_4 {
+	background: url(knopki.gif) no-repeat -143px -7px;}
+td.bt_4:hover {
+	background: url(knopki.gif) no-repeat -143px -57px;}
+td.bt_4:active {
+	background: url(knopki.gif) no-repeat -142px -56px;}
+
+td.bt_5 {
+	background: url(knopki.gif) no-repeat -178px -7px;}
+td.bt_5:hover {
+	background: url(knopki.gif) no-repeat -178px -57px;}
+td.bt_5:active {
+	background: url(knopki.gif) no-repeat -177px -56px;}
+
+td.bt_6 {
+	background: url(knopki.gif) no-repeat -213px -7px;}
+td.bt_6:hover {
+	background: url(knopki.gif) no-repeat -213px -57px;}
+td.bt_6:active {
+	background: url(knopki.gif) no-repeat -212px -56px;}
+
+td.bt_7 {
+	background: url(knopki.gif) no-repeat -248px -7px;}
+td.bt_7:hover {
+	background: url(knopki.gif) no-repeat -248px -57px;}
+td.bt_7:active {
+	background: url(knopki.gif) no-repeat -247px -56px;}
+
+td.bt_8 {
+	background: url(knopki.gif) no-repeat -282px -7px;}
+td.bt_8:hover {
+	background: url(knopki.gif) no-repeat -282px -57px;}
+td.bt_8:active {
+	background: url(knopki.gif) no-repeat -281px -56px;}
+
+td.bt_9 {
+	background: url(knopki.gif) no-repeat -317px -7px;}
+td.bt_9:hover {
+	background: url(knopki.gif) no-repeat -317px -57px;}
+td.bt_9:active {
+	background: url(knopki.gif) no-repeat -316px -56px;}
+
+td.bt_zp {
+	background: url(knopki.gif) no-repeat -349px -7px;}
+td.bt_zp:hover {
+	background: url(knopki.gif) no-repeat -349px -57px;}
+td.bt_zp:active {
+	background: url(knopki.gif) no-repeat -348px -56px;}
+
+td.bt_rv {
+	background: url(knopki.gif) no-repeat -401px -8px;}
+td.bt_rv:hover {
+	background: url(knopki.gif) no-repeat -401px -58px;}
+td.bt_rv:active {
+	background: url(knopki.gif) no-repeat -400px -57px;}
+
+td.bt_pl {
+	background: url(knopki.gif) no-repeat -456px -8px;}
+td.bt_pl:hover {
+	background: url(knopki.gif) no-repeat -456px -58px;}
+td.bt_pl:active {
+	background: url(knopki.gif) no-repeat -455px -57px;}
+
+td.bt_mi {
+	background: url(knopki.gif) no-repeat -490px -8px;}
+td.bt_mi:hover {
+	background: url(knopki.gif) no-repeat -490px -58px;}
+td.bt_mi:active {
+	background: url(knopki.gif) no-repeat -489px -57px;}
+
+td.bt_um {
+	background: url(knopki.gif) no-repeat -525px -8px;}
+td.bt_um:hover {
+	background: url(knopki.gif) no-repeat -525px -58px;}
+td.bt_um:active {
+	background: url(knopki.gif) no-repeat -524px -57px;}
+
+td.bt_dl {
+	background: url(knopki.gif) no-repeat -561px -8px;}
+td.bt_dl:hover {
+	background: url(knopki.gif) no-repeat -561px -58px;}
+td.bt_dl:active {
+	background: url(knopki.gif) no-repeat -560px -57px;}
+
+td.bt_st {
+	background: url(knopki.gif) no-repeat -653px -8px;}
+td.bt_st:hover {
+	background: url(knopki.gif) no-repeat -653px -58px;}
+td.bt_st:active {
+	background: url(knopki.gif) no-repeat -652px -57px;}
+
+td.bt_pm {
+	background: url(knopki.gif) no-repeat -689px -8px;}
+td.bt_pm:hover {
+	background: url(knopki.gif) no-repeat -689px -58px;}
+td.bt_pm:active {
+	background: url(knopki.gif) no-repeat -688px -57px;}
+
+td.bt_kr {
+	background: url(knopki.gif) no-repeat -726px -8px;}
+td.bt_kr:hover {
+	background: url(knopki.gif) no-repeat -726px -58px;}
+td.bt_kr:active {
+	background: url(knopki.gif) no-repeat -725px -57px;}
+
+td.bt_sb {
+	background: url(knopki.gif) no-repeat -804px -8px;}
+td.bt_sb:hover {
+	background: url(knopki.gif) no-repeat -804px -58px;}
+td.bt_sb:active {
+	background: url(knopki.gif) no-repeat -803px -57px;}
