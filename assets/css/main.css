@@ -7,7 +7,7 @@ html {
     margin: 0;
 }
 .center   { text-align: center; }
-.small    { font-size: 10.9px;  }
+.small    { font-size: 10px;  }
 h1,h2,h3  { text-align: center; }
 
 .footer   { background: #1a1a1a; padding-top: 10px; }
@@ -28,7 +28,7 @@ h1,h2,h3  { text-align: center; }
 a {
     padding: 4px;
     margin: 1px; 
-    border: 2px blue solid; 
+    border: 1px blue solid; 
     text-decoration: none;
     color: black;
     font-size: 16px;
@@ -42,15 +42,15 @@ nav a {
     border: 0 !important;
 }
 
-.button {
+.button, .group {
     font-family: Arial;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 
     border: none;
     display: inline-block;
-    padding: 8px 6px;
-    margin: 1.4px;
+    padding: 7.5px 5.5px;
+    margin: 1.3px;
     text-decoration: none !important;
     color: #333333;
     background-color: rgba(255, 170, 0, 0.97);
@@ -58,6 +58,21 @@ nav a {
     white-space: nowrap;
     border-radius: 6px;
 }
+
+.noborder {
+    border: 0.2px orange solid;
+}
+
+.smallg {
+    font-size: 10px;
+    color: #333333;
+}
+
+.button img {
+    width: 43.5px;
+    height: 45px;
+}
+
 .button:hover {
     background-color: orange;
     text-decoration: none;
@@ -72,7 +87,7 @@ nav a {
 }
 @media screen and (orientation:portrait) {
     .logo {
-        width: 100px; height: 50px; padding-bottom: 3px;
+        width: 100px; height: 45px; padding-bottom: 3px;
     }
 }
 

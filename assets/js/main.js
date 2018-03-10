@@ -3,8 +3,8 @@ var nedhome = "n-e-d.github.io";
 
 function b(type, name, url) {
     "use strict";
-    var image = name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
-    var text = '<a href="http://' + url + '" class="' + type + ' button">' + name + "<br>" + '<small class="small">' + type + "</small><br>" + '<img src="assets/images/' + type.toString().toLowerCase() + "/" + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
+    var image = type.toString().toLowerCase() + "/"  + name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
+    var text = '<a href="http://' + url + '" class="' + type + ' button">' + name + "<br>" + '<small class="small">' + type + "</small><br>" + '<img src="assets/images/' + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
 
     document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
 }
@@ -19,41 +19,56 @@ function bJS(type, name, jsCode) {
 
 /* Catagory: NedApp/NedTools */
 sites.innerHTML = sites.innerHTML + "<br>";
+
 // Replaced on main screen: bJS("NedApp", "Calculator", "calc");
 // Replaced on main screen: b("NedApp", "Clock", nedhome + "/tools/clock");
-b("NedApp", "$ Converter", nedhome + "/tools/moneyconverter");
-b("NedApp", "Holidays", nedhome + "/tools/holidays");
-b("NedApp", "Radio", nedhome + "/tools/radio");
+// Replaced on main screen: bJS("NedApp", "URL Shortner", "urlshort");
+
+// Does not work any more: b("NedApp", "$ Converter", nedhome + "/tools/moneyconverter");
+// Does not work any more: b("NedApp", "Holidays", nedhome + "/tools/holidays");
+// Does not work any more: b("NedApp", "Radio", nedhome + "/tools/radio");
 bJS("NedApp", "Tv", "tv");
 bJS("NedApp", "Piano", "piano");
 bJS("NedApp", "Translator", "translator");
-bJS("NedApp", "QR code creator", "qrgen");
-// Replaced on main screen: bJS("NedApp", "URL Shortner", "urlshort");
+bJS("NedApp", "QR creator", "qrgen");
 
 /* Catagory: SocialMedia */
 sites.innerHTML = sites.innerHTML + "<br>";
-b("SocialMedia", "Facebook", "facebook.com");
-b("SocialMedia", "Twitter", "twitter.com");
-b("SocialMedia", "Youtube", "youtube.com");
-b("SocialMedia", "Flickr", "flickr.com");
-b("SocialMedia", "Google+", "plus.google.com");
-b("SocialMedia", "Imgur", "imgur.com");
-b("SocialMedia", "Yahoo A.", "answers.yahoo.com");
-b("SocialMedia", "Snapchat", "snapchat.com");
-b("SocialMedia", "Instagram", "instagram.com");
+group("Social", false, 
+        "Facebook[:]facebook.com", "twitter[:]twitter.com",
+        "Youtube[:]youtube.com",
+        "Flickr[:]flickr.com",
+        "Google+[:]plus.google.com",
+        "Imgur[:]imgur.com",
+        "Instagram[:]instagram.com"
+        );
+/*sites.innerHTML = sites.innerHTML + "<br>";
+b("Social", "Facebook", "facebook.com");
+b("Social", "Twitter", "twitter.com");
+b("Social", "Youtube", "youtube.com");
+b("Social", "Flickr", "flickr.com");
+b("Social", "Google+", "plus.google.com");
+b("Social", "Imgur", "imgur.com");
+b("Social", "Instagram", "instagram.com");*/
 
 /* Catagory: Kids */
 sites.innerHTML = sites.innerHTML + "<br>";
-b("Kids", "Disney", "disney.com");
+/*b("Kids", "Disney", "lol.disney.com/games");
 b("Kids", "Nick", "nick.com");
-b("Kids", "CN", "cartoonnetwork.com");
 b("Kids", "GamesFreak", "gamesfreak.net");
-b("Kids", "Minecraft", "www.minecraft.net");
+b("Kids", "Minecraft", "www.minecraft.net/download");
 b("Kids", "PBS", "pbskids.org");
 b("Kids", "CoolMath", "www.coolmath-games.com");
 b("Kids", "Poptropica", "www.poptropica.com");
 b("Kids", "FunBrain", "www.funbrain.com");
-b("Kids", "Pogo", "pogo.com");
+b("Kids", "Pogo", "pogo.com");*/
+
+group("Kids", false,
+        "Disney[:]lol.disney.com/games",
+        "Nick[:]nick.com", "GamesFreak[:]GamesFreak.net",
+        "Minecraft[:]minecraft.net", "PBS[:]pbskids.org",
+        "Coolmath[:]www.coolmath-games.com", "poptropica[:]www.poptropica.com",
+        "Funbrain[:]www.funbrain.com", "Pogo[:]pogo.com");
 
 /* Catagory: Outher */
 sites.innerHTML = sites.innerHTML + "<br>";
@@ -68,9 +83,7 @@ b("Outher", "ZunoZap", "zunozap.github.io");
 
 /* Catagory: Email */
 sites.innerHTML = sites.innerHTML + "<br>";
-b("Email", "Gmail", "gmail.com");
-b("Email", "Yahoo Mail", "yahoo.com");
-b("Email", "Outlook", "outlook.com");
+group("Email", false, "Outlook[:]outlook.com", "Gmail[:]gmail.com[:]true", "Yahoo Mail[:]yahoo.com");
 
 function showHide(type) {
     "use strict";
@@ -137,11 +150,27 @@ if (window.location.href.toString().includes("nedhome")){
     document.getElementById("infobar").style.display = "block";
 }
 
-if (window.innerWidth < 600) {
+if (window.innerWidth < 650) {
     var x = document.getElementsByClassName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.padding = "3px 2px";
+    }
+
+    var x = document.getElementsByClassName("groupimage");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.width = "25px";
+        x[i].style.height = "20px";
+    }
+}
+
+if (window.innerWidth > 800) {
+    var x = document.getElementsByClassName("groupimage");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.width = "35px";
+        x[i].style.height = "30px";
     }
 }
 
@@ -197,6 +226,45 @@ function twelvehour(i) {
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
+}
+
+function group() {
+    var i = 0;
+    var group = arguments[0]; // group name
+    var border = arguments[1]; // include border?
+    var html = "<div class='group'>" + group + "<br>";
+    
+    var clas = "test";
+    if (!border) {
+        clas = "noborder";
+    }
+
+    for (i = 2; i < arguments.length; i++) {
+        // group
+        var res = arguments[i].split("[:]");
+        var elname = res[0];
+        if (res.length < 3) {
+            elname = "";
+        }
+        var image = group.toString().toLowerCase() + "/"  + res[0].toString().replace(" ", "-").replace("$", "money").toLowerCase();
+
+            var text = '<a href="http://' + res[1] + '" class="' + clas + '"><span class="smallg">' + elname + "</span>" + '&nbsp;<img class="groupimage" src="assets/images/' + image + '.png" alt="' +
+                image;
+
+        if (res.length < 3) {
+            text += '" width="30" height="25">' + "</a>";
+        } else {
+            text += '" width="22" height="15">' + "</a>";
+        }
+        html = html + text;
+        if (arguments.length > 7) {
+            if (i > (arguments.length / 2) && i < ((arguments.length / 2) + 1)) {
+                html += "<br>";
+            }
+        }
+    }
+    html = html + "</div>"
+    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + html;
 }
 
 if (!checkCookie("advancedsearch")) {
