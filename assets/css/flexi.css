@@ -1,16 +1,6 @@
-/* from https://github.com/LucyDevv/FlexiCSS/ */
-
-/* FlexiCSS */
-/* Made with love by Lucy */
+/* https://github.com/LucyDevv/FlexiCSS/ FlexiCSS Made with love by Lucy */
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Muli');
 
-.flexi-header {
-font-family: 'Josefin Sans', sans-serif;
-}
-
-.flexi-paragraph {
-    font-family: 'Muli', sans-serif;
-}
-
-/* End of the file */
+.flexi-header { font-family: 'Josefin Sans', sans-serif; }
+.flexi-paragraph { font-family: 'Muli', sans-serif; }
