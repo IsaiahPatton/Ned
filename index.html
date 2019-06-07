@@ -3,9 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="NedHome, Ned">
-        <meta name="author" content="Isaiah Patton">
-
+        <meta name="description" content="NedHome webportal. Your new startpage">
         <title>NedHome</title>
 
         <!-- Stylesheets -->
@@ -13,6 +11,7 @@
         <link rel="stylesheet" href="assets/css/w3-custom.css" type="text/css">
         <link rel="stylesheet" href="assets/css/main.css" type="text/css">
         <link rel="stylesheet" href="assets/css/flexi.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/note.css" type="text/css">
 
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel='stylesheet' type='text/css'>
@@ -20,32 +19,34 @@
         <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/navbarcss/bootstrap.min.css">
     </head>
 
-    <body onload="startTime()">
-        <div class="infobar" id="infobar">
-            <div class="right" onClick="document.getElementById('infobar').style.display = 'none'">X</div>
-            <b>WARRNING:</b> Starting January 21st, 2018 The domain <a href="http://nedhome.ml">nedhome.ml</a> will nolonger be used.<br>
-            Please update your bookmarks to <a href="/">n-e-d.github.io</a>
-        </div>
+    <body onload="startTime()" style="hight:100%;">
 
-        <nav class="navbar navbar-inverse" style="margin:0px;">
-            <div class="container-fluid">
-                <div class="navbar-header flexi-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">NedHome</a>
-                    <a class="w3-center btn btn-default" href="javascript:open('nsettings')">Settings</a>
-                    <span id="theTime" onload="startTime()">Time</span>
-                </div>
+        <ul>
+            <li><img class="w3-button" src="assets/images/logo_2_15.png"></li>
+            <li class="name"><span>NedHome&trade;</span></li>
+            <li style="float:right"><a class="sett" href="javascript:open('nsettings')">Settings</a></li>
+            <li style="float:right"><span id="theTime" onload="startTime()">Time</span></li>
+        </ul>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" onload="startTime()">
-                    <form id="web-search" class="navbar-form navbar-right" method="get" action="http://www.google.com/search">
+        <center class="w3-center">
+            <span class="right logo">
+                <img class="right nobklogo" src="https://clipartion.com/wp-content/uploads/2015/12/koala-clipart-koala-clipart.png" width="200" height="75" alt="Logo">
+                <br />
+            </span>
+     
+            <span class="left logo">
+                <img class="left nobklogo" src="http://i.imgur.com/AP5imrD.png" width="180" height="65" alt="NedHome Face Logo">
+                <br />
+                <iframe class="calc" width="177" height="243" src="calc.html" scrolling="no" frameborder="0"></iframe>
+            </span>
+            <div class="bricks">
+                <div id="sites"></div>
+                <br>
+
+                <form id="web-search" class="navbar-form" method="get" action="http://www.google.com/search">
 
                         <div class="form-group">
-                            <input id="WS-TXT" type="text" class="form-control" name="q" size="35" placeholder="Search" maxlength="255" value="" />
+                            <input id="WS-TXT" type="text" class="form-control" name="q" size="35" placeholder="Search" maxlength="255" value="" style="border:1px solid black;" />
                         </div>
                         <span class="nocook" id="nocook">
                             <input id="searchValue" class="btn btn-default" type="submit" value="Google"
@@ -60,46 +61,93 @@
                             <input id="searchValue" class="btn btn-default" type="submit" value="Search">
                         </span>
                     </form>
+                <br>
+
+                <div class='group' id="draggable"><p id="zkids">Kids</p>
+                    <figure>
+                        <a href="http://lol.disney.com/games"><img src="assets/images/kids/disney.png" alt="Disney" width="30" height="25"></a>
+                        <figcaption>Disney</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="http://nick.com"><img src="assets/images/kids/nick.png" alt="Nick" width="30" height="25"></a>
+                        <figcaption>Nick</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="http://GamesFreak.net"><img src="assets/images/kids/gamesfreak.png" alt="GamesFreak" width="30" height="25"></a>
+                        <figcaption>GamesFreak</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="http://minecraft.net"><img src="assets/images/kids/minecraft.png" alt="Minecraft" width="30" height="25"></a>
+                        <figcaption>Minecraft</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="http://pbskids.org"><img src="assets/images/kids/pbs.png" alt="PBS" width="30" height="25"></a>
+                        <figcaption>PBS</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="http://www.coolmath-games.com"><img src="assets/images/kids/coolmath.png" alt="Coolmath" width="30" height="25"></a>
+                        <figcaption>Coolmath</figcaption>
+                    </figure>
+                    <br>
+                    <figure>
+                        <a href="http://www.poptropica.com"><img src="assets/images/kids/poptropica.png" alt="poptropica" width="30" height="25"></a>
+                        <figcaption>poptropica</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="http://www.funbrain.com"><img src="assets/images/kids/funbrain.png" alt="Funbrain" width="30" height="25"></a>
+                        <figcaption>Funbrain</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="http://pogo.com"><img src="assets/images/kids/pogo.png" alt="Pogo" width="30" height="25"></a>
+                        <figcaption>Pogo</figcaption>
+                    </figure>
+                </div>
+
+                <div class="ui-widget-content group draggable">Other<br>
+                    <figure>
+                        <a href="http://weebly.com"><img src="assets/images/outher/weebly.png" alt="Weebly" width="30" height="25"></a>
+                        <figcaption>Weebly</figcaption>
+                        </figure> 
+                        <figure><a href="http://ccleaner.com"><img src="assets/images/outher/ccleaner.png" alt="CCleaner" width="30" height="25"></a>
+                        <figcaption>CCleaner</figcaption>
+                        </figure>
+                        <figure><a href="http://microsoft.com"><img src="assets/images/outher/microsoft.png" alt="Microsoft" width="30" height="25"></a>
+                        <figcaption>Microsoft</figcaption></figure>
+                        <figure><a href="http://wikipedia.org"><img src="assets/images/outher/wikipedia.png" alt="Wikipedia" width="30" height="25"></a>
+                        <figcaption>Wikipedia</figcaption></figure>
+                        <figure><a href="http://github.com"><img src="assets/images/outher/github.png" alt="GitHub" width="30" height="25"></a>
+                        <figcaption>GitHub</figcaption></figure>
+                        <br>
+                        <figure><a href="http://netflix.com"><img src="assets/images/outher/netflix.png" alt="Netflix" width="30" height="25"></a><figcaption>Netflix</figcaption></figure> 
+                        <figure><a href="http://ebay.com"><img src="assets/images/outher/ebay.png" alt="eBay" width="30" height="25"></a><figcaption>eBay</figcaption></figure>
+                        <figure><a href="http://zunozap.com"><img src="assets/images/outher/zunozap.png" alt="ZunoZap" width="30" height="25"></a><figcaption>ZunoZap</figcaption></figure> </div>
+
+                <br>
+                <div class='group'>Email<br>
+                    <figure>
+                        <a href="http://outlook.com"><img src="assets/images/email/outlook.png" alt="Outlook" width="30" height="25"></a>
+                        <figcaption>Outlook</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="http://gmail.com"><img src="assets/images/email/gmail.png" alt="Gmail" width="30" height="25"></a>
+                        <figcaption>Gmail</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="http://yahoo.com"><img src="assets/images/email/yahoo-mail.png" alt="Yahoo Mail" width="30" height="25"></a>
+                        <figcaption>Yahoo Mail</figcaption>
+                    </figure> 
                 </div>
                 
-            </div>
-        </nav>
-        <center class="w3-center">
-            <span class="right logo">
-                <img class="right nobklogo" src="https://clipartion.com/wp-content/uploads/2015/12/koala-clipart-koala-clipart.png" width="200" height="75" alt="Logo">
-                <br />
-                <form class="right" target="_blank" action="http://www.s3s.so/create" method="POST">
-                    <br /><span class="w3-text-white w3-text-bold">URL Shortener</span>
-                    <input class="short" type="text" placeholder="URL" name="url" autocomplete="off" accesskey="s" size="15">
-                    <input class="w3-center short" type = "submit" name="short" value="Shorten">
-                    <div id="settings" style="display:none">
-                        <div class="dop_left">
-                            <input name="us_link" type="text" autocomplete="off" placeholder="">
-                        </div>
-                        <div class="dop_right">
-                            <input name="pass" maxlength="6" type="text" autocomplete="off" placeholder="">
-                        </div>
-                        <div class="dop_left">
-                            <input name="email" type="text" autocomplete="off" placeholder="">
-                        </div>
-                        <div class="dop_right">
-                            <input name="del_pass" maxlength="6" type="text" autocomplete="off" placeholder="">
-                        </div>
-                        <div>
-                            <input type="checkbox" class="checkbox" id="checkbox-2" name="stats" value="1"  />
-                        </div>
-                    </div>
-                </form>
-            </span>
-     
-            <span class="left logo">
-                <img class="left nobklogo" src="http://i.imgur.com/AP5imrD.png" width="200" height="75" alt="NedHome Face Logo">
-                <br />
-                <iframe width="177" height="243" src="calc.html" scrolling="no" frameborder="0"></iframe><br /><a href="http://www.calculator-1.com/" style="font-size: 7px; background: gray; color: white;">Calculator-1.com - The Best Free Online Calculator</a>
-            </span>
-            <div class="bricks">
-                <div id="sites"></div>
-                <br>
+                <div class='group'>Social<br>
+                    <a href="https://facebook.com" class="noborder"> <img class="groupimage" src="assets/images/social/facebook.png" alt="facebook"></a>
+                    <a href="https://twitter.com" class="noborder"> <img class="groupimage" src="assets/images/social/twitter.png" alt="twitter" width="30" height="25"></a>
+                    <a href="https://youtube.com" class="noborder"> <img class="groupimage" src="assets/images/social/youtube.png" alt="youtube" width="30" height="25"></a>
+                    <a href="http://flickr.com" class="noborder"> <img class="groupimage" src="assets/images/social/flickr.png" alt="flickr" width="30" height="25"></a>
+                    <br>
+                    <a href="http://plus.google.com" class="noborder"> <img class="groupimage" src="assets/images/social/google+.png" alt="google+" width="30" height="25"></a>
+                    <a href="http://imgur.com" class="noborder"> <img class="groupimage" src="assets/images/social/imgur.png" alt="imgur" width="30" height="25"></a>
+                    <a href="http://instagram.com" class="noborder"> <img class="groupimage" src="assets/images/social/instagram.png" alt="instagram" width="30" height="25"></a>
+                </div>
             </div>
         </center>
 
@@ -134,13 +182,13 @@
                 </div>
                 <div class="bottom-left">
                     <!--Recoding-->
-                    <!--<p>Toggle Catagorys:<br>
+                    <p>Toggle Catagorys:<br>
                         <button class="button" onClick="showHide('NedApp')">NedApps</button>
                         <button class="button" onClick="showHide('SocialMedia')">SocialMedia</button>
                         <button class="button" onClick="showHide('Kids')">Kids</button>
                         <button class="button" onClick="showHide('Outher')">Outher</button>
                         <button class="button" onClick="showHide('Email')">Email</button>
-                    </p>-->
+                    </p>
                     <br>
                 </div>
             </div>
@@ -151,7 +199,7 @@
             <div class="w3-modal-content w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
                     <span onclick="document.getElementById('nsettings').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <h5>NedHome v5 Settings</h5>
+                    <h5>NedHome v6 Settings</h5>
                 </header>
                 <div class="w3-padding w3-center">
                     <br>
@@ -168,7 +216,7 @@
                         <small>This site is not affiliated with any of the search engines provided</small>
                     </p>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p>Site v5.0-1/6/18</p></footer>
+                <footer class="w3-container w3-theme-l1"><br><p>Site v6.0-Beta</p></footer>
             </div>
         </div>
         
@@ -181,14 +229,11 @@
                 </header>
                 <div class="w3-center">
                     <br>
-                    <object width="700" height="167">
-                        <param name="movie" value="http://www.buttonbass.com/images/blacknyellow700.swf">
-                        <param name="wmode" value="transparent">
-                        <embed src="http://www.buttonbass.com/images/blacknyellow700.swf" type="application/x-shockwave-flash" wmode="transparent" width="700" height="167"></embed></object><br>
+                        Adobe Flash is <a href="https://theblog.adobe.com/adobe-flash-update/">being discontinued</a> as of July 2017.<br>
+                        We will not provide the Flash Piano due to Flash issues.
                     <br>
-                    <p>Not working? Try the old version <a href="tools/piano.html">here</a></p>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p>Site v5.0</p></footer>
+                <footer class="w3-container w3-theme-l1"><br><p>Site v6</p></footer>
             </div>
         </div>
 
@@ -203,7 +248,7 @@
                     <script type="text/javascript" src="http://100widgets.com/js_data.php?id=241"></script>
                     Not working? Try the old version <a href="tools/tv.html">here</a>
                 </div>
-                <footer class="w3-container w3-theme-l1">Site v5.0</footer>
+                <footer class="w3-container w3-theme-l1">Site v6</footer>
             </div>
         </div>
 
@@ -217,7 +262,7 @@
                 <div class="w3-center">
                     <script type="text/javascript" src="http://100widgets.com/js_data.php?id=277"></script>
                 </div>
-                <footer class="w3-container w3-theme-l1">Site v5.0</footer>
+                <footer class="w3-container w3-theme-l1">Site v6</footer>
             </div>
         </div>
 
@@ -231,11 +276,35 @@
                 <div class="w3-center">
                     <script type="text/javascript" src="http://100widgets.com/js_data.php?id=266"></script>
                 </div>
-                <footer class="w3-container w3-theme-l1">Site v5.0</footer>
+                <footer class="w3-container w3-theme-l1">Site v6</footer>
             </div>
         </div>
 
-        <script type="text/javascript" src="https://zunozap.github.io/assets/js/jquery.min.js"></script>
+        <!-- Beta WARNNING -->
+        <div id="beta" class="w3-modal">
+            <div class="w3-modal-content w3-card-8 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <span onclick="document.getElementById('beta').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h5 class="w3-center"><br>NedHome&trade; version 6.0 Beta<br></h5>
+                </header>
+                <div class="w3-center">
+                    <br>
+                    <p>This is a beta version of the site &amp; may be unstable<br>Use at your own risk!</p>
+                </div>
+                <footer class="w3-container w3-theme-l1">version 6.0-PRE_2<br></footer>
+            </div>
+        </div>
+
+        <div id="zunozapnote"/>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script>
+            //document.getElementById("beta").style.display = "inline-block";
+            $( function() { $( ".group" ).draggable(); } );
+        </script>
+
+        <script src="https://files.zunozap.com/note.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     </body>

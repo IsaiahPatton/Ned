@@ -1,20 +1,21 @@
-/**
- * NedHome Theme
- *  Author: Isaiah Patton
- *  URL: https://n-e-d.github.io/
- **/
-html {
-    margin: 0;
-}
-.center   { text-align: center; }
-.small    { font-size: 10px;  }
-h1,h2,h3  { text-align: center; }
+html { margin: 0; }
 
-.footer   { background: #1a1a1a; padding-top: 10px; }
+.center, h1,h2,h3 { text-align: center; }
+.nh-cooke, .ase   { display: none; }
+
+.small    { font-size: 10px; }
+.nocook   { display: inline-block; }
+
+nav a     { border: 0 !important; }
+
+.footer   { background: #1a1a1a; padding-top: 10px; bottom: 0; position: fixed; width: 100%;}
 .footer p { color: white; }
 
-.bricks {
-    background-color: silver;
+.bricks   { padding-top: 2px; }
+.noborder { border: 0; }
+
+body {
+    background-color: silver !important;
     background-image: linear-gradient(335deg, #c00 23px, transparent 23px),
 	linear-gradient(155deg, #d00 23px, transparent 23px),
     linear-gradient(335deg, #b00 23px, transparent 23px),
@@ -22,10 +23,9 @@ h1,h2,h3  { text-align: center; }
     background-size: 58px 58px;	
     background-position: 0 2px, 4px 35px, 29px 31px, 34px 6px;
     background-repeat: repeat;
-    padding-top: 2px;
 }
 
-a {
+.group a {
     padding: 4px;
     margin: 1px; 
     border: 1px blue solid; 
@@ -34,12 +34,10 @@ a {
     font-size: 16px;
     display: inline-block; 
 }
+
 a:hover {
     text-decoration: none; 
     color: gray;
-}
-nav a {
-    border: 0 !important;
 }
 
 .button, .group {
@@ -59,12 +57,15 @@ nav a {
     border-radius: 6px;
 }
 
-.noborder {
-    border: 0.2px orange solid;
+.groupimage, .group img {
+    width: 30px;
+    height: 25px;
 }
 
-.smallg {
-    font-size: 10px;
+.group a { border: 0.2px orange solid; }
+
+.smallg, figcaption {
+    font-size: 9.8px;
     color: #333333;
 }
 
@@ -85,9 +86,15 @@ nav a {
     .logo       { background: rgba(0,0,0,0.45); border: 1px solid rgba(0,0,0,0.49); padding: 2px; width: 150px; height: 60px; }
     .nobklogo   { padding: 2px; width: 150px; height: 60px; margin-bottom: 5px;}
 }
+
 @media screen and (orientation:portrait) {
-    .logo {
-        width: 100px; height: 45px; padding-bottom: 3px;
+    .logo { width: 100px; height: 45px; padding-bottom: 3px; }
+    .calc, .name { display: none; }
+
+    .right.logo, .left.nobklogo { display: none; }
+    .left.logo {
+        padding:0;
+        margin:0;
     }
 }
 
@@ -100,18 +107,19 @@ nav a {
     padding: 10px;
     padding-top: 0;
 }
-.infobar .right {
-    text-align: right;
-}
+
+.infobar .right { text-align: right; }
+
 .infobar a {
     color: lightblue;
     border: 0;
 }
+
 .infobar a:hover {
     color: white;
     background-color: black;
-    
 }
+
 .infobar2 {
     display: none;
     width: 100%;
@@ -121,24 +129,54 @@ nav a {
     padding: 2px;
     padding-top: 0;
 }
-.infobar2 .right {
-    text-align: right;
-}
+.infobar2 .right { text-align: right; }
+
 .infobar2 a {
     color: lightblue;
     border: 0;
 }
+
 .infobar2 a:hover {
     color: white;
     background-color: black;
-    
 }
-.nocook {
+
+figure {
     display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2px;
+    margin-right: 2px;
 }
-.nh-cooke {
-    display: none;
+
+.group p {
+    padding: 5px;
+    cursor: move;
+    background-color: #2196F3;
+    color: #fff;
+    margin-bottom: 5px;
 }
-.ase {
-    display: none;
+
+.nlogo {
+    background: url("../images/logo_1_10.png") no-repeat;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li { float: left; }
+
+li * {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) { background-color: #111; }
