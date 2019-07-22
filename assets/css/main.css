@@ -103,7 +103,7 @@ a:hover {
 
 @media screen and (orientation:portrait) {
     .logo { width: 100px; height: 45px; padding-bottom: 3px; }
-    .calc, .name { display: none; }
+    .name { display: none; }
 
     .right.logo, .left.nobklogo { display: none; }
     .left.logo {
