@@ -1,39 +1,11 @@
 var sites = document.getElementById("sites");
 
-function b(type, name, url) {
-    "use strict";
-    var image = type.toString().toLowerCase() + "/"  + name.toString().replace(" ", "-").replace("$", "money").toLowerCase();
-    var text = '<a href="http://' + url + '" class="' + type + ' button">' + name + "<br>" + '<small class="small">' + type + "</small><br>" + '<img src="assets/images/' + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
-
-    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
-}
-
-function bJS(type, name, jsCode) {
-    "use strict";
-    var image = name.toString().replace(new RegExp(" ", 'g'), "-").toLowerCase();
-    var text = '<a href="javascript:open(\'' + jsCode + '\');" class="' + type + ' button">' + name + "<br>" + '<img src="assets/images/' + type.toString().toLowerCase() + "/" + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
-
-    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
-}
-
-/* Catagory: NedApp/NedTools */
-//sites.innerHTML = sites.innerHTML + "<br>";
-
-//bJS("NedApp", "Tv", "tv");
-//bJS("NedApp", "Calculator", "calculator");
-//bJS("NedApp", "Translator", "translator");
-//bJS("NedApp", "QR creator", "qrgen");
-
 function showHide(type) {
     "use strict";
     var x = document.getElementsByClassName(type);
     var i;
-    for (i = 0; i < x.length; i++) {
-        if (x[i].style.display == "none") {
-            x[i].style.display = "inline-block";
-        } else
-            x[i].style.display = "none";
-    }
+    for (i = 0; i < x.length; i++) 
+        x[i].style.display = (x[i].style.display == "none") ? "inline-block" : "none";
 }
 
 function switchSearch(name, url, a) {
@@ -64,8 +36,7 @@ function getCookie(cname) {
 }
 
 function checkCookie(cook) {
-    var user = getCookie(cook);
-    return user != "";
+    return getCookie(cook) != "";
 }
 
 function switchS(name, url, a){
@@ -139,55 +110,23 @@ function startTime() {
     var mon = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
     h = twelvehour(h);
     m = checkTime(m);
-    document.getElementById('theTime').innerHTML = days[today.getDay()] + ", " + mon[today.getMonth()] + " " + today.getDate() + ", " + h + ":" + m + " " + pmAm;
+    if (window.innerWidth < 450) {
+        document.getElementById('theTime').innerHTML = h + ":" + m + " on " + (today.getMonth() + 1) + "/" + today.getDate();
+    } else
+        document.getElementById('theTime').innerHTML = days[today.getDay()] + ", " + mon[today.getMonth()] + " " + today.getDate() + ", " + h + ":" + m + " " + pmAm;
     var t = setTimeout(startTime, 15000);
 }
 
 function amOrPm(i) {
-    if (i > 12) {return "PM"};
-    return "AM";
+    return i > 12 ? "PM" : "AM";
 }
 
 function twelvehour(i) {
-    if (i > 12) { i = i - 12};
-    return i;
+    return (i > 12) ? i = i - 12 : i;
 }
 
 function checkTime(i) {
-    if (i < 10) i = "0" + i;  // add zero in front of numbers < 10
-    return i;
-}
-
-function group() {
-    var i = 0;
-    var group = arguments[0]; // group name
-    //var border = arguments[1]; // include border?
-    var html = "<div class='group'>" + group + "<br>";
-
-    for (i = 1; i < arguments.length; i++) {
-        // group
-        var res = arguments[i].split("[:]");
-        var elname = "<figcaption>" + res[0] + "</figcaption></figure>";
-        if (res.length < 3)
-            elname = "";
-
-        var image = group.toString().toLowerCase() + "/"  + res[0].toString().replace(" ", "-").replace("$", "money").toLowerCase();
-        var text = '<figure><a href="http://' + res[1] + '">' + '<img src="assets/images/' + image + '.png" alt="' + res[0];
-
-        if (res.length < 3)
-            text += '" width="30" height="25">' + "</a>";
-        else
-            text += '" width="30" height="25">' + "</a>";
-
-        text += elname + " ";
-        html = html + text;
-        var argl = arguments.length + 1;
-        if (arguments.length > 6 && i >= (argl / 2) && i < ((argl / 2) + 1))
-            html += "<br>";
-    }
-    html = html + "</div>"
-    document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + html +
-        html.toString().replace(/</g, '&#60;');
+    return (i < 10) ? (i = "0" + i) : i; // add zero in front of numbers < 10
 }
 
 function openTv() {
