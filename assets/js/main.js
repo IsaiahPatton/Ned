@@ -1,5 +1,4 @@
 var sites = document.getElementById("sites");
-var nedhome = "n-e-d.github.io";
 
 function b(type, name, url) {
     "use strict";
@@ -12,23 +11,18 @@ function b(type, name, url) {
 function bJS(type, name, jsCode) {
     "use strict";
     var image = name.toString().replace(new RegExp(" ", 'g'), "-").toLowerCase();
-    var text = '<a href="javascript:open(\'' + jsCode + '\');" class="' + type + ' button">' + name + "<br>" + '<small class="small">' + type + "</small><br>" + '<img src="assets/images/' + type.toString().toLowerCase() + "/" + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
+    var text = '<a href="javascript:open(\'' + jsCode + '\');" class="' + type + ' button">' + name + "<br>" + '<img src="assets/images/' + type.toString().toLowerCase() + "/" + image + '.png" alt="' + name + '" width="70" height="55">' + "</a>";
 
     document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + text;
 }
 
 /* Catagory: NedApp/NedTools */
-sites.innerHTML = sites.innerHTML + "<br>";
+//sites.innerHTML = sites.innerHTML + "<br>";
 
-bJS("NedApp", "Tv", "tv");
-bJS("NedApp", "Piano", "piano");
-bJS("NedApp", "Translator", "translator");
-bJS("NedApp", "QR creator", "qrgen");
-
-/* Catagory: SocialMedia */
-/* Catagory: Games / Cartoons */
-/* Catagory: Outher
-/* Catagory: Email */
+//bJS("NedApp", "Tv", "tv");
+//bJS("NedApp", "Calculator", "calculator");
+//bJS("NedApp", "Translator", "translator");
+//bJS("NedApp", "QR creator", "qrgen");
 
 function showHide(type) {
     "use strict";
@@ -126,22 +120,14 @@ function advancedsearch(tagname) {
 }
 
 function searchbar(startup){
-    if (getCookie("advancedsearch").toString().includes("enable") || startup || window.location.protocol == "file:") {
-        document.getElementById("nocook").style.display = "none";
-        document.getElementById("nhcooke").style.display = "inline-block"; 
+    document.getElementById("nhcooke").style.display = "inline-block"; 
 
-        var x = document.getElementsByClassName("nocook");
-        var i;
-        for (i = 0; i < x.length; i++)
-            x[i].style.display = "none";
+    x = document.getElementsByClassName("nh-cooke");
+    for (i = 0; i < x.length; i++)
+        x[i].style.display = "inline-block";
 
-        x = document.getElementsByClassName("nh-cooke");
-        for (i = 0; i < x.length; i++)
-            x[i].style.display = "inline-block";
-
-        if (checkCookie("searchone"))
-            switchSearch(getCookie("searchone"), getCookie("searchtwo"), getCookie("searchthree"));
-    }
+    if (checkCookie("searchone"))
+        switchSearch(getCookie("searchone"), getCookie("searchtwo"), getCookie("searchthree"));
 }
 
 function startTime() {
@@ -188,28 +174,25 @@ function group() {
         var image = group.toString().toLowerCase() + "/"  + res[0].toString().replace(" ", "-").replace("$", "money").toLowerCase();
         var text = '<figure><a href="http://' + res[1] + '">' + '<img src="assets/images/' + image + '.png" alt="' + res[0];
 
-        if (res.length < 3) {
+        if (res.length < 3)
             text += '" width="30" height="25">' + "</a>";
-        } else {
+        else
             text += '" width="30" height="25">' + "</a>";
-        }
 
         text += elname + " ";
         html = html + text;
         var argl = arguments.length + 1;
-        if (arguments.length > 6) {
-            if (i >= (argl / 2) && i < ((argl / 2) + 1)) {
-                html += "<br>";
-            }
-        }
+        if (arguments.length > 6 && i >= (argl / 2) && i < ((argl / 2) + 1))
+            html += "<br>";
     }
     html = html + "</div>"
     document.getElementById("sites").innerHTML = document.getElementById("sites").innerHTML + html +
         html.toString().replace(/</g, '&#60;');
 }
 
-if (!checkCookie("advancedsearch")) {
-    setCookie("advancedsearch", "enabled");
+function openTv() {
+    document.getElementById('tvs').src = "tools/tv.html";
+    document.getElementById('tvopen').style.display = "none";
 }
 
 searchbar(false);

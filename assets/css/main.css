@@ -7,8 +7,9 @@ html { margin: 0; }
 .nocook   { display: inline-block; }
 
 nav a     { border: 0 !important; }
+li        { float: left; }
 
-.footer   { background: #1a1a1a; padding-top: 10px; bottom: 0; position: fixed; width: 100%;}
+.footer   { background: #1a1a1a; padding-top: 3px; bottom: 0; position: fixed; width: 100%;}
 .footer p { color: white; }
 
 .bricks   { padding-top: 2px; }
@@ -52,9 +53,22 @@ a:hover {
     text-decoration: none !important;
     color: #333333;
     background-color: rgba(255, 170, 0, 0.97);
-    text-align: center; 
+    text-align: center;
     white-space: nowrap;
     border-radius: 6px;
+}
+
+.navbtn {
+    display: inline-block;
+    font-family: Arial;
+    text-decoration: none !important;
+    color: #333333;
+    background-color: rgba(255, 170, 0, 0.97);
+    text-align: center;
+    padding-top:8px;
+    min-width: 96px;
+    max-width: 96px;
+    padding-bottom:8px;
 }
 
 .groupimage, .group img {
@@ -98,63 +112,12 @@ a:hover {
     }
 }
 
-.infobar {
-    display: none;
-    width: 100%;
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    padding-top: 0;
-}
-
-.infobar .right { text-align: right; }
-
-.infobar a {
-    color: lightblue;
-    border: 0;
-}
-
-.infobar a:hover {
-    color: white;
-    background-color: black;
-}
-
-.infobar2 {
-    display: none;
-    width: 100%;
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    padding: 2px;
-    padding-top: 0;
-}
-.infobar2 .right { text-align: right; }
-
-.infobar2 a {
-    color: lightblue;
-    border: 0;
-}
-
-.infobar2 a:hover {
-    color: white;
-    background-color: black;
-}
-
 figure {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 2px;
     margin-right: 2px;
-}
-
-.group p {
-    padding: 5px;
-    cursor: move;
-    background-color: #2196F3;
-    color: #fff;
-    margin-bottom: 5px;
 }
 
 .nlogo {
@@ -166,10 +129,11 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
 }
 
-li { float: left; }
+.top {
+  background-color: #333;
+}
 
 li * {
   display: block;
@@ -177,6 +141,22 @@ li * {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.navbtn * {
+
+  color: white;
+  text-align: center;
+  padding: 24px 4px;
+  text-decoration: none;
+}
+
+.gitbtn {
+    background-color: #f7f7f7;
+    color: black;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 2px 6px 2px 6px;
 }
 
 li a:hover:not(.active) { background-color: #111; }
