@@ -1,22 +1,10 @@
 <html>
-    <title>Ned by Isaiah</title>
     <head>
         <meta charset='utf-8'>
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Ned by Isaiah Patton">
-        <meta name="keywords" content="ned, nedhome.ml, isaiahpatton, nedhome">
-        <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/stylesheet.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/github-light.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/print.css" media="print">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/button.css">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/footer.css">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/ribbon.css">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/settings.css">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/pages.css">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/background.css">
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/ned/stylesheets/mouse.css">
+        <meta name="keywords" content="ned, nedhome.ml, nedhome">
+
         <script type='text/javascript' src='https://m.free-codes.org/g.php?id=2004&cid=20'></script>
         <style>
             body { margin: 0; }
@@ -57,22 +45,32 @@
                     document.write("&nbsp; &nbsp;");
                 </script>
                 <small class="extra2">
-                    <nedprofile style="color:blue; text-decoration:underline;" onclick="gotoProfile();">[Profile]&nbsp;</nedprofile>
-                    <redoname style="color:blue; text-decoration:underline;" onclick="resetName();">[Logout]</redoname>
+                    <nedprofile style="color:blue;text-decoration:underline;" onclick="gotoProfile();">[Profile]&nbsp;</nedprofile>
+                    <redoname style="color:blue;text-decoration:underline;" onclick="resetName();">[Logout]</redoname>
                 </small>
             </div>
         </li>
     </ul>
+    
+    <script>
+        var frequency = 88.9;
+var radio = navigator.mozFMRadio;
 
-    <header>
-        <div class="inner">
-            <CENTER>
-                <script type="text/javascript" src="https://n-e-d.github.io/ned/js/settings.js"></script>
-                <p id="demo">
-                <script type="text/javascript" src="https://n-e-d.github.io/ned/js/face.js"></script>
-            </CENTER>
-        </div>
-    </header>
+if (radio.antennaAvailable) {
+  radio.enable(frequency);
+} else {
+  alert("You need to plug your headphone");
+}
+
+radio.addEventListener('antennaavailablechange', function () {
+  if (radio.antennaAvailable) {
+    radio.enable(frequency);
+  } else {
+    radio.disable();
+  }
+})
+    </script>
+
 <CENTER>
 <script type="text/javascript" src="http://100widgets.com/js_data.php?id=256"></script>
 </CENTER>

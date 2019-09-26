@@ -6,23 +6,19 @@
         <meta name="description" content="NedHome webportal. Your new startpage">
         <title>NedHome</title>
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="assets/css/fontStyles.css" type="text/css" >
         <link rel="stylesheet" href="assets/css/w3-custom.css" type="text/css">
         <link rel="stylesheet" href="assets/css/main.css" type="text/css">
-        <link rel="stylesheet" href="assets/css/flexi.css" type="text/css">
         <link rel="stylesheet" href="assets/css/note.css" type="text/css">
 
-        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel='stylesheet' type='text/css'>
-        <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel='stylesheet' type='text/css'>
-
-        <link rel="stylesheet" type="text/css" href="https://n-e-d.github.io/navbarcss/bootstrap.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel='stylesheet'>
+        <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel='stylesheet'>
     </head>
 
     <body onload="startTime()" style="hight:100%;">
+    <div class="body2">
 
         <ul class="top">
-            <li><img class="w3-button" src="assets/images/logo_2_15.png"></li>
+            <li><img class="w3-button" src="assets/images/logo_2_15.png" width="68px" height="51px"></li>
             <li class="name"><span>NedHome</span></li>
 
             <li style="float:right"><a class="sett" href="javascript:open('nsettings')">Page Settings</a></li>
@@ -31,114 +27,98 @@
 
         <center class="w3-center">
             <div class="bricks">
-                <div id="sites"></div>
-                <br>
+                <br><div style="padding-top:1.5em;">&nbsp;</div>
 
-                <form id="web-search" class="navbar-form" method="get" action="http://www.google.com/search">
-                        <div class="form-group">
-                            <input id="WS-TXT" type="text" class="form-control" name="q" size="75" placeholder="Search the web" maxlength="255" value="" style="border:1px solid black; margin-right:0;" />
-                        </div>
-                        <input id="searchValue" class="btn btn-default" type="submit" value="&#128269;">
-                    </form>
+                <form method="get" action="http://www.google.com/search">
+                    <div class="search">
+                        <input type="text" name="q" placeholder="Search the web">
+                        <input type="submit" value="&#128269;">
+                    </div>
+                </form>
                 <br>
 
                 <div class='group' id="draggable">Kids<br>
                     <figure>
-                        <a href="http://lol.disney.com/games"><img src="assets/images/kids/disney.png" alt="Disney" width="30" height="25"></a>
+                        <a href="https://lol.disney.com/games"><img src="assets/images/kids/disney.png" alt="Disney" width="30" height="25"></a>
                         <figcaption>Disney</figcaption>
                     </figure>
                     <figure>
-                        <a href="http://nick.com"><img src="assets/images/kids/nick.png" alt="Nick" width="30" height="25"></a>
-                        <figcaption>Nick</figcaption>
-                    </figure> 
-                    <figure>
-                        <a href="http://gamesfreak.net"><img src="assets/images/kids/gamesfreak.png" alt="GamesFreak" width="30" height="25"></a>
-                        <figcaption>GamesFreak</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="http://pbskids.org/games/"><img src="assets/images/kids/pbs.png" alt="PBS" width="30" height="25"></a>
+                        <a href="https://pbskids.org/games/"><img src="assets/images/kids/pbs.png" alt="PBS" width="30" height="25"></a>
                         <figcaption>PBS</figcaption>
                     </figure>
                     <br>
                     <figure>
-                        <a href="http://www.coolmath-games.com"><img src="assets/images/kids/coolmath.png" alt="Coolmath" width="30" height="25"></a>
+                        <a href="https://coolmath-games.com"><img src="assets/images/kids/coolmath.png" alt="Coolmath" width="30" height="25"></a>
                         <figcaption>Coolmath</figcaption>
                     </figure>
                     <figure>
-                        <a href="http://www.poptropica.com"><img src="assets/images/kids/poptropica.png" alt="poptropica" width="30" height="25"></a>
-                        <figcaption>poptropica</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="http://www.funbrain.com"><img src="assets/images/kids/funbrain.png" alt="Funbrain" width="30" height="25"></a>
+                        <a href="https://funbrain.com"><img src="assets/images/kids/funbrain.png" alt="Funbrain" width="30" height="25"></a>
                         <figcaption>Funbrain</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="http://pogo.com"><img src="assets/images/kids/pogo.png" alt="Pogo" width="30" height="25"></a>
-                        <figcaption>Pogo</figcaption>
                     </figure>
                 </div>
 
                 <div class="ui-widget-content group draggable">Other<br>
                     <figure>
-                        <a href="http://weebly.com"><img src="assets/images/outher/weebly.png" alt="Weebly" width="30" height="25"></a>
-                        <figcaption>Weebly</figcaption>
-                        </figure> 
-                        <figure><a href="http://ccleaner.com"><img src="assets/images/outher/ccleaner.png" alt="CCleaner" width="30" height="25"></a>
-                        <figcaption>CCleaner</figcaption>
-                        </figure>
-                        <figure><a href="http://microsoft.com"><img src="assets/images/outher/microsoft.png" alt="Microsoft" width="30" height="25"></a>
-                        <figcaption>Microsoft</figcaption></figure>
-                        <figure><a href="http://wikipedia.org"><img src="assets/images/outher/wikipedia.png" alt="Wikipedia" width="30" height="25"></a>
-                        <figcaption>Wikipedia</figcaption></figure>
-                        <br>
-                        <figure><a href="http://github.com"><img src="assets/images/outher/github.png" alt="GitHub" width="30" height="25"></a>
+                        <a href="https://microsoft.com"><img src="assets/images/other/microsoft.png" alt="Microsoft" width="30" height="25"></a>
+                        <figcaption>Microsoft</figcaption>
+                    </figure>
+                        <figure><a href="https://wikipedia.org"><img src="assets/images/other/wikipedia.png" alt="Wikipedia" width="30" height="25"></a>
+                        <figcaption>Wikipedia</figcaption></figure><br>
+                        <figure><a href="https://github.com"><img src="assets/images/other/github.png" alt="GitHub" width="30" height="25"></a>
                         <figcaption>GitHub</figcaption></figure>
-                        <figure><a href="http://netflix.com"><img src="assets/images/outher/netflix.png" alt="Netflix" width="30" height="25"></a><figcaption>Netflix</figcaption></figure> 
-                        <figure><a href="http://ebay.com"><img src="assets/images/outher/ebay.png" alt="eBay" width="30" height="25"></a><figcaption>eBay</figcaption></figure>
-                        <figure><a href="http://zunozap.com"><img src="assets/images/outher/zunozap.png" alt="ZunoZap" width="30" height="25"></a><figcaption>ZunoZap</figcaption></figure> </div>
+                        <figure><a href="https://netflix.com"><img src="assets/images/other/netflix.png" alt="Netflix" width="30" height="25"></a><figcaption>Netflix</figcaption></figure> 
+                        <figure><a href="https://ebay.com"><img src="assets/images/other/ebay.png" alt="eBay" width="30" height="25"></a><figcaption>eBay</figcaption></figure>
+                </div>
 
-                
                 <div class='group'>Email<br>
                     <figure>
-                        <a href="http://outlook.com"><img src="assets/images/email/outlook.png" alt="Outlook" width="30" height="25"></a>
+                        <a href="https://outlook.com"><img src="assets/images/email/outlook.png" alt="Outlook" width="30" height="25"></a>
                         <figcaption>Outlook</figcaption>
-                    </figure> 
+                    </figure><br>
                     <figure>
-                        <a href="http://gmail.com"><img src="assets/images/email/gmail.png" alt="Gmail" width="30" height="25"></a>
+                        <a href="https://gmail.com"><img src="assets/images/email/gmail.png" alt="Gmail" width="30" height="25"></a>
                         <figcaption>Gmail</figcaption>
                     </figure> 
                     <figure>
-                        <a href="http://yahoo.com"><img src="assets/images/email/yahoo-mail.png" alt="Yahoo Mail" width="30" height="25"></a>
+                        <a href="https://yahoo.com"><img src="assets/images/email/yahoo-mail.png" alt="Yahoo Mail" width="30" height="25"></a>
                         <figcaption>Yahoo Mail</figcaption>
                     </figure> 
                 </div>
 
                 <div class='group'>Social<br>
-                    <a href="https://facebook.com" class="noborder"> <img class="groupimage" src="assets/images/social/facebook.png" alt="facebook"></a>
-                    <a href="https://twitter.com" class="noborder"> <img class="groupimage" src="assets/images/social/twitter.png" alt="twitter" width="30" height="25"></a>
-                    <a href="https://youtube.com" class="noborder"> <img class="groupimage" src="assets/images/social/youtube.png" alt="youtube" width="30" height="25"></a>
-                    <br>
-                    <a href="http://flickr.com" class="noborder"> <img class="groupimage" src="assets/images/social/flickr.png" alt="flickr" width="30" height="25"></a>
-                    <a href="http://imgur.com" class="noborder"> <img class="groupimage" src="assets/images/social/imgur.png" alt="imgur" width="30" height="25"></a>
-                    <a href="http://instagram.com" class="noborder"> <img class="groupimage" src="assets/images/social/instagram.png" alt="instagram" width="30" height="25"></a>
+                    <figure>
+                        <a href="https://facebook.com"><img src="assets/images/social/facebook.png" alt="Facebook" width="30" height="25"></a>
+                        <figcaption>Facebook</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://twitter.com"><img src="assets/images/social/twitter.png" alt="Twitter" width="30" height="25"></a>
+                        <figcaption>Twitter</figcaption>
+                    </figure><br>
+                    <figure>
+                        <a href="https://youtube.com"><img src="assets/images/social/youtube.png" alt="YouTube" width="30" height="25"></a>
+                        <figcaption>YouTube</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://imgur.com"><img src="assets/images/social/imgur.png" alt="Imgur" width="30" height="25"></a>
+                        <figcaption>imgur</figcaption>
+                    </figure>
                 </div>
             </div>
         </center>
 
         <div class="footer">
             <div class="container">
-                    <p style="float:right;">
-                        <a class="gitbtn" href="https://github.com/n-e-d/n-e-d.github.io/issues">Report Issue</a>
-                    </p>
-                    <div id="desktopFooter" style="text-align: center; margin-left: 10%;margin-right: 15%;">
-                        <div class="navbtn"><a href="javascript:open('tv')" style="background:url('assets/images/nedapp/tv.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Tv</a></div>
-                        <div class="navbtn"><a href="javascript:open('calculator')" style="background:url('assets/images/nedapp/calculator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Calculator</a></div>
-                        <div class="navbtn"><a href="javascript:open('translator')" style="background:url('assets/images/nedapp/translator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Translator</a></div>
-                        <div class="navbtn"><a href="javascript:open('qrgen')" style="background:url('assets/images/nedapp/qr-creator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">QR Creator</a></div>
-                    </div>
-                    <div id="mobileFooter">
-                    </div>
-                
+                <p style="float:right;" class="nomobile">
+                    <a class="gitbtn" href="https://github.com/n-e-d/n-e-d.github.io/issues">Report Issue</a>
+                </p>
+                <div id="desktopFooter" style="text-align:center;margin-left:10%;margin-right:15%;">
+                    <div class="navbtn"><a href="javascript:open('tv')" onclick="openTv()" style="background:url('assets/images/nedapp/tv.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Tv</a></div>
+                    <div class="navbtn"><a href="javascript:open('calculator')" style="background:url('assets/images/nedapp/calculator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Calculator</a></div>
+                    <div class="navbtn"><a href="javascript:open('translator')" style="background:url('assets/images/nedapp/translator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Translator</a></div>
+                    <div class="navbtn"><a href="javascript:open('qrgen')" style="background:url('assets/images/nedapp/qr-creator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">QR Creator</a></div>
+                </div>
+                <div id="mobileFooter">
+                </div>
             </div>
         </div>
 
@@ -147,7 +127,7 @@
             <div class="w3-modal-content w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
                     <span onclick="document.getElementById('nsettings').style.display='none'" class="w3-button w3-display-topright" style="font-size:2em;">&times;</span>
-                    <h5 style="padding:11px;">NedHome Settings</h5>
+                    <h5 style="padding:7px;">NedHome Settings</h5>
                 </header>
                 <div class="w3-padding w3-center">
                     <br>
@@ -160,7 +140,7 @@
                     </p>
                     <hr>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p style="font-size:14px;">Site version 6.1. Copyright &copy; 2016-2019 under GPLv3</p></footer>
+                <footer class="w3-container w3-theme-l1"><br><p style="font-size:14px;">Site version 6.1.0, Copyright &copy; 2016-2019 under GPLv3</p></footer>
             </div>
         </div>
 
@@ -172,40 +152,38 @@
                     <h5>Calculator</h5>
                 </header>
                 <div class="w3-center">
-                    <br>
-                        <iframe class="calc" width="200px" height="243" src="tools/calculator.html" scrolling="no" frameborder="0"></iframe>
-                    <br>
+                    <br><iframe class="calc" width="200px" height="243" src="tools/calculator.html" scrolling="no" frameborder="0"></iframe><br>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p><a href="http://www.calculator-1.com/" style="font-size: 6.5px; background: gray; color: white;">Calculator-1.com - Free Online Calculator</a></p></footer>
+                <footer class="w3-container w3-theme-l1"><a href="http://www.calculator-1.com/" style="font-size: 6.5px; background: gray; color: white;">Calculator-1.com - Free Online Calculator</a></footer>
             </div>
         </div>
 
         <!-- Tv -->
-        <div id="tv" class="w3-modal">
-            <div class="w3-modal-content w3-card-8 w3-animate-top">
+        <div id="tv" class="modal">
+            <div class="modal-content">
                 <header class="w3-container w3-theme-l1">
-                    <span onclick="document.getElementById('tv').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <h5>Legal Free Tv</h5>
+                    <span onclick="closeTv()" class="w3-button w3-display-topright">&times;</span>
+                    <h5>Free Tv by PlutoTV</h5>
                 </header>
                 <div class="w3-center">
-                    <button id="tvopen" onclick="openTv()">Click to load TV page</button>
-                    <br>
-                    <br>
-                    <iframe id="tvs" width="600px" height="400px"></iframe><br>
-                    Not working? Try the other version <a href="tools/tv.html">here</a>
+                    <button id="tvopen" onclick="openTv()">Click here to load TV</button>
+                    <iframe id="tvs" width="100%" height="470px"></iframe>
                 </div>
-                <footer class="w3-container w3-theme-l1">Site v6</footer>
+                <footer class="w3-container w3-theme-l1 w3-center"><small>Not working? Try the other version <a href="tools/tv.html">here</a>,
+                    We are not affiliated with PlutoTV</small></footer>
             </div>
         </div>
 
         <!-- Translator -->
-        <div id="translator" class="w3-modal">
-            <div class="w3-modal-content w3-card-8 w3-animate-top">
+        <div id="translator" class="modal">
+            <div class="modal-content width-70 w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
                     <span onclick="document.getElementById('translator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h5>Translator</h5>
                 </header>
                 <div class="w3-center">
+                    <div style="float:left;" class="ad"><script src="side-ad.js"></script></div>
+                    <div style="float:right;" class="ad"><script src="side-ad.js"></script></div>
                     <script type="text/javascript" src="http://100widgets.com/js_data.php?id=277"></script>
                 </div>
                 <footer class="w3-container w3-theme-l1">Site v6</footer>
@@ -213,13 +191,15 @@
         </div>
 
         <!-- QR Code Creator -->
-        <div id="qrgen" class="w3-modal">
-            <div class="w3-modal-content w3-card-8 w3-animate-top">
+        <div id="qrgen" class="modal">
+            <div class="modal-content width-70 w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
                     <span onclick="document.getElementById('qrgen').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h5>QR code creator</h5>
                 </header>
                 <div class="w3-center">
+                    <div style="float:left;" class="ad"><script src="side-ad.js"></script></div>
+                    <div style="float:right;" class="ad"><script src="side-ad.js"></script></div>
                     <script type="text/javascript" src="http://100widgets.com/js_data.php?id=266"></script>
                 </div>
                 <footer class="w3-container w3-theme-l1">Site v6</footer>
@@ -228,13 +208,8 @@
 
         <div id="zunozapnote"/>
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="assets/js/jquery-ui.min.js"></script>
-        <script>
-            $( function() { $( ".group" ).draggable(); } );
-        </script>
-
-        <script src="https://files.zunozap.com/note.js"></script>
+        <script src="assets/js/note.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
+    </div>
     </body>
 </html>

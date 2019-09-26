@@ -17,8 +17,7 @@ function setCookie(cname, cvalue) {
     "use strict";
     var d = new Date();
     d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+    document.cookie = cname + "=" + cvalue + "; " + "expires=" + d.toGMTString();
 }
 
 function getCookie(cname) {
@@ -73,23 +72,6 @@ if (window.innerWidth > 800) {
     }
 }
 
-function advancedsearch(tagname) {
-    if (getCookie("advancedsearch").toString().includes("disable")) {
-        searchbar(true);
-        document.getElementById("ase").style.display = "none";
-        document.getElementById("asd").style.display = "inline-block";
-        document.getElementById("advancedsearche").style.display = "inline-block";
-        setCookie("advancedsearch", "enabled");
-    } else {
-        document.getElementById("nocook").style.display = "inline-block";
-        document.getElementById("nhcooke").style.display = "none";
-        document.getElementById("asd").style.display = "none";
-        document.getElementById("ase").style.display = "inline-block";
-        document.getElementById("advancedsearche").style.display = "none";
-        setCookie("advancedsearch", "disabled");
-    }
-}
-
 function searchbar(startup){
     document.getElementById("nhcooke").style.display = "inline-block"; 
 
@@ -111,7 +93,7 @@ function startTime() {
     h = twelvehour(h);
     m = checkTime(m);
     if (window.innerWidth < 450) {
-        document.getElementById('theTime').innerHTML = h + ":" + m + " on " + (today.getMonth() + 1) + "/" + today.getDate();
+        document.getElementById('theTime').innerHTML = h + ":" + m + "; " + (today.getMonth() + 1) + "/" + today.getDate();
     } else
         document.getElementById('theTime').innerHTML = days[today.getDay()] + ", " + mon[today.getMonth()] + " " + today.getDate() + ", " + h + ":" + m + " " + pmAm;
     var t = setTimeout(startTime, 15000);
@@ -130,8 +112,14 @@ function checkTime(i) {
 }
 
 function openTv() {
-    document.getElementById('tvs').src = "tools/tv.html";
+    document.getElementById('tvs').src = "http://pluto.tv"; // "tools/tv.html";
     document.getElementById('tvopen').style.display = "none";
 }
+
+function closeTv() {
+    document.getElementById('tvs').src = "";
+    document.getElementById('tv').style.display = "none";
+}
+
 
 searchbar(false);

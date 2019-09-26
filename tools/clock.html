@@ -1,78 +1,29 @@
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
-    <title>Time</title>
-  </head>
-
-  <body>
+        <title>Time</title>
+    </head>
 
     <style type="text/css">
     html {
         background-image: url("http://enjoycss.com/webshots/hB_1.png");    
     }
-    .time {
-        font-size: 4em;
-    }
-    small {
-        font-size: 0.3em;
-    }
+    .time {font-size: 4em;}
+    small {font-size: 0.3em;}
     </style>
 
-<CENTER>
-  <img id="myImage" src="http://i.imgur.com/AP5imrD.png" onclick="nedface()" alt="Ned's Face" height="100" width="330"></p>
-<hr>
-
-<script>
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"];
-var month = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    if (h > 12) {
-        h = h - 12;
-    }
-    m = checkTime(m);
-    s = checkTime(s);
-    var timeraw = checkTime(h) + ":" + m;
-    var time = timeraw + "<small>:" + s + "</small>";
-    document.getElementById('txt').innerHTML = "<span class='time'>" + time + "</span><br>" + 
-                days[today.getDay()] + " " + month[today.getMonth()] + " " + addSufToDay(today.getDate()) + ", " + today.getFullYear() + "&nbsp;<br><small>" 
-                    + Intl.DateTimeFormat().resolvedOptions().timeZone + "<br>UTC" + ( -(today.getTimezoneOffset() / 60) ) + "</small>";
-    document.title = timeraw + ":" +s;
-    var t = setTimeout(startTime, 500);
-}
-function addSufToDay(i) {
-    var last = i % 10;
-    if (last == 1)
-        return i + "st";
-
-    if (last == 2)
-        return i + "nt";
-
-    if (last == 3)
-        return i + "rd";
-
-    return i + "th";
-}
-function checkTime(i) {
-    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-    return i;
-}
-</script>
-
-<body onload="startTime()">
-
-<h1 id="txt"></h1>
-</CENTER>
-
-<style>
+    <body onload="startTime()">
+        <CENTER>
+            <img id="myImage" src="http://i.imgur.com/AP5imrD.png" onclick="nedface()" alt="Ned's Face" height="100" width="330"></p>
+            <hr>
+            <h1 id="txt"></h1>
+        </CENTER>
+    </body>
+    <style>
     iframe[name="speedyadsframe"] {
         position: absolute;
         bottom: 0;
@@ -84,7 +35,7 @@ function checkTime(i) {
     sa_code = "ad843251fdfd294774c69e8048d74d60";
     sa_protocol = ("https:"==document.location.protocol)?"https":"http";
     sa_pline = "0";
-    sa_maxads = "4";
+    sa_maxads = "6";
     sa_bgcolor = "ffffff";
     sa_bordercolor = "bdd631";
     sa_superbordercolor = "bdd631";
@@ -93,7 +44,7 @@ function checkTime(i) {
     sa_urlcolor = "788300";
     sa_b = "0";
     sa_format = "banner_728x90_4";
-    sa_width = "728";
+    sa_width = "1092";
     sa_height = "90";
     sa_location = "0";
     sa_radius = "null";
@@ -101,6 +52,36 @@ function checkTime(i) {
     sa_font = "0";
     document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense2.js'%3e%3c/script%3e"));
     </script>
+    <script>
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"];
+    var month = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-</body>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        if (h > 12)
+            h = h - 12;
+
+        m = checkTime(m);
+        s = checkTime(s);
+        var timeraw = checkTime(h) + ":" + m;
+        var time = timeraw + "<small>:" + s + "</small>";
+        document.getElementById('txt').innerHTML = "<span class='time'>" + time + "</span><br>" + 
+                    days[today.getDay()] + " " + month[today.getMonth()] + " " + addSufToDay(today.getDate()) + ", " + today.getFullYear() + "&nbsp;<br><small>" 
+                        + Intl.DateTimeFormat().resolvedOptions().timeZone + "<br>UTC" + ( -(today.getTimezoneOffset() / 60) ) + "</small>";
+        document.title = timeraw + ":" +s;
+        var t = setTimeout(startTime, 500);
+    }
+    function addSufToDay(i) {
+        var last = i % 10;
+        var ends = ["st", "nt", "rd", "th"];
+        return i + (last > 3 ? "th" : ends[last-1]);
+    }
+    function checkTime(i) {
+        return i < 10 ? i = "0" + i : i;
+    }
+    </script>
+
 </html>
