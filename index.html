@@ -9,13 +9,13 @@
         <link rel="stylesheet" href="assets/css/w3-custom.css" type="text/css">
         <link rel="stylesheet" href="assets/css/main.css" type="text/css">
         <link rel="stylesheet" href="assets/css/note.css" type="text/css">
-
-        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel='stylesheet'>
-        <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel='stylesheet'>
     </head>
 
     <body onload="startTime()" style="hight:100%;">
-    <div class="body2">
+        <script>
+            var d = new Date().getDay() + 1;
+            document.body.style.backgroundImage = "URL('assets/backgrounds/" + d + ".jpg')";
+        </script>
 
         <ul class="top">
             <li><img class="w3-button" src="assets/images/logo_2_15.png" width="68px" height="51px"></li>
@@ -114,7 +114,7 @@
                 <div id="desktopFooter" style="text-align:center;margin-left:10%;margin-right:15%;">
                     <div class="navbtn"><a href="javascript:open('tv')" onclick="openTv()" style="background:url('assets/images/nedapp/tv.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Tv</a></div>
                     <div class="navbtn"><a href="javascript:open('calculator')" style="background:url('assets/images/nedapp/calculator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Calculator</a></div>
-                    <div class="navbtn"><a href="javascript:open('translator')" style="background:url('assets/images/nedapp/translator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Translator</a></div>
+                    <div class="navbtn"><a href="https://translate.google.com/" style="background:url('assets/images/nedapp/translator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Translator</a></div>
                     <div class="navbtn"><a href="javascript:open('qrgen')" style="background:url('assets/images/nedapp/qr-creator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">QR Creator</a></div>
                 </div>
                 <div id="mobileFooter">
@@ -174,22 +174,6 @@
             </div>
         </div>
 
-        <!-- Translator -->
-        <div id="translator" class="modal">
-            <div class="modal-content width-70 w3-card-8 w3-animate-top">
-                <header class="w3-container w3-theme-l1">
-                    <span onclick="document.getElementById('translator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <h5>Translator</h5>
-                </header>
-                <div class="w3-center">
-                    <div style="float:left;" class="ad"><script src="side-ad.js"></script></div>
-                    <div style="float:right;" class="ad"><script src="side-ad.js"></script></div>
-                    <script type="text/javascript" src="http://100widgets.com/js_data.php?id=277"></script>
-                </div>
-                <footer class="w3-container w3-theme-l1">Site v6</footer>
-            </div>
-        </div>
-
         <!-- QR Code Creator -->
         <div id="qrgen" class="modal">
             <div class="modal-content width-70 w3-card-8 w3-animate-top">
@@ -198,9 +182,9 @@
                     <h5>QR code creator</h5>
                 </header>
                 <div class="w3-center">
+                    <iframe src="http://qrickit.com/qrickit_apps/qrickit_widget_home.php" height="450px" border="0"></iframe>
                     <div style="float:left;" class="ad"><script src="side-ad.js"></script></div>
                     <div style="float:right;" class="ad"><script src="side-ad.js"></script></div>
-                    <script type="text/javascript" src="http://100widgets.com/js_data.php?id=266"></script>
                 </div>
                 <footer class="w3-container w3-theme-l1">Site v6</footer>
             </div>
@@ -209,7 +193,7 @@
         <div id="zunozapnote"/>
 
         <script src="assets/js/note.js"></script>
+        <script src="assets/js/background.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
-    </div>
     </body>
 </html>

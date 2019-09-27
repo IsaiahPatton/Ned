@@ -9,7 +9,7 @@ html { margin: 0; }
 nav a     { border: 0 !important; }
 li        { float: left; }
 
-.footer   { background: rgba(0, 0, 0, 0.25); padding-top: 3px; bottom: 0; position: fixed; width: 100%;}
+.footer   { background: rgba(0, 0, 0, 0.1); padding-top: 3px; bottom: 0; position: fixed; width: 100%;}
 .footer p { color: white; }
 
 .bricks   { padding-top: 2px; }
@@ -19,7 +19,8 @@ body {
     width:100%;
     background-color: rgba(179, 179, 179, 0.4) !important;
     background-image: URL("../../bg.png");
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .group a {
