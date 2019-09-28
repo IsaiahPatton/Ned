@@ -7,15 +7,13 @@
         <title>NedHome</title>
 
         <link rel="stylesheet" href="assets/css/w3-custom.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/w3-orange.css" type="text/css">
         <link rel="stylesheet" href="assets/css/main.css" type="text/css">
         <link rel="stylesheet" href="assets/css/note.css" type="text/css">
     </head>
 
     <body onload="startTime()" style="hight:100%;">
-        <script>
-            var d = new Date().getDay() + 1;
-            document.body.style.backgroundImage = "URL('assets/backgrounds/" + d + ".jpg')";
-        </script>
+        <script type="text/javascript" src="assets/js/main.js"></script> <!--Load main JS-->
 
         <ul class="top">
             <li><img class="w3-button" src="assets/images/logo_2_15.png" width="68px" height="51px"></li>
@@ -26,8 +24,8 @@
         </ul>
 
         <center class="w3-center">
-            <div class="bricks">
-                <br><div style="padding-top:1.5em;">&nbsp;</div>
+            <div>
+                <br><div style="padding-top:2em;">&nbsp;</div>
 
                 <form method="get" action="http://www.google.com/search">
                     <div class="search">
@@ -111,6 +109,7 @@
                 <p style="float:right;" class="nomobile">
                     <a class="gitbtn" href="https://github.com/n-e-d/n-e-d.github.io/issues">Report Issue</a>
                 </p>
+
                 <div id="desktopFooter" style="text-align:center;margin-left:10%;margin-right:15%;">
                     <div class="navbtn"><a href="javascript:open('tv')" onclick="openTv()" style="background:url('assets/images/nedapp/tv.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Tv</a></div>
                     <div class="navbtn"><a href="javascript:open('calculator')" style="background:url('assets/images/nedapp/calculator.png');background-size:24px;background-repeat:no-repeat;background-position:center top;">Calculator</a></div>
@@ -125,43 +124,43 @@
         <!-- Settings -->
         <div id="nsettings" class="w3-modal">
             <div class="w3-modal-content w3-card-8 w3-animate-top">
-                <header class="w3-container w3-theme-l1">
+                <header class="w3-container w3-theme">
                     <span onclick="document.getElementById('nsettings').style.display='none'" class="w3-button w3-display-topright" style="font-size:2em;">&times;</span>
                     <h5 style="padding:7px;">NedHome Settings</h5>
                 </header>
                 <div class="w3-padding w3-center">
                     <br>
                     <p id="advancedsearche">Search Engine:
-                        <button class="button searchSwitch" onClick="switchS('Google', 'http://www.google.com/search', 'q')">Google</button>
-                        <button class="button searchSwitch" onClick="switchS('KidRex', 'http://www.kidrex.org/results/', 'q')">KidRex</button>
-                        <button class="button searchSwitch" onClick="switchS('DuckDuckGo', 'https://www.duckduckgo.com/', 'q')">DuckDuckGo</button>
-                        <button class="button searchSwitch" onClick="switchS('Yahoo', 'http://www.yahoo.com/search', 'p')">Yahoo</button><br>
+                        <button class="searchSwitch" onClick="switchSearch('Google', 'google.com/search', 'q')">Google</button>
+                        <button class="searchSwitch" onClick="switchSearch('KidRex', 'kidrex.org/results/', 'q')">KidRex</button>
+                        <button class="searchSwitch" onClick="switchSearch('DuckDuckGo', 'duckduckgo.com/', 'q')">DuckDuckGo</button>
+                        <button class="searchSwitch" onClick="switchSearch('Yahoo', 'yahoo.com/search', 'p')">Yahoo</button><br>
                         <small>This site is not affiliated with any of the search engines provided</small>
                     </p>
                     <hr>
                 </div>
-                <footer class="w3-container w3-theme-l1"><br><p style="font-size:14px;">Site version 6.1.0, Copyright &copy; 2016-2019 under GPLv3</p></footer>
+                <footer class="w3-container w3-theme"><p style="font-size:14px;">Site version 6.1. Copyright &copy; 2016-2019 under GPLv3</p></footer>
             </div>
         </div>
 
         <!-- Calculator -->
         <div id="calculator" class="w3-modal">
             <div class="w3-modal-content w3-card-8 w3-animate-top">
-                <header class="w3-container w3-theme-l1">
+                <header class="w3-container w3-theme">
                     <span onclick="document.getElementById('calculator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h5>Calculator</h5>
                 </header>
                 <div class="w3-center">
                     <br><iframe class="calc" width="200px" height="243" src="tools/calculator.html" scrolling="no" frameborder="0"></iframe><br>
                 </div>
-                <footer class="w3-container w3-theme-l1"><a href="http://www.calculator-1.com/" style="font-size: 6.5px; background: gray; color: white;">Calculator-1.com - Free Online Calculator</a></footer>
+                <footer class="w3-container w3-theme"><a href="http://www.calculator-1.com/" style="font-size: 6.5px; background: gray; color: white;">Calculator-1.com - Free Online Calculator</a></footer>
             </div>
         </div>
 
         <!-- Tv -->
         <div id="tv" class="modal">
             <div class="modal-content">
-                <header class="w3-container w3-theme-l1">
+                <header class="w3-container w3-theme">
                     <span onclick="closeTv()" class="w3-button w3-display-topright">&times;</span>
                     <h5>Free Tv by PlutoTV</h5>
                 </header>
@@ -169,7 +168,7 @@
                     <button id="tvopen" onclick="openTv()">Click here to load TV</button>
                     <iframe id="tvs" width="100%" height="470px"></iframe>
                 </div>
-                <footer class="w3-container w3-theme-l1 w3-center"><small>Not working? Try the other version <a href="tools/tv.html">here</a>,
+                <footer class="w3-container w3-theme w3-center"><small>Not working? Try the other version <a href="tools/tv.html">here</a>,
                     We are not affiliated with PlutoTV</small></footer>
             </div>
         </div>
@@ -177,23 +176,23 @@
         <!-- QR Code Creator -->
         <div id="qrgen" class="modal">
             <div class="modal-content width-70 w3-card-8 w3-animate-top">
-                <header class="w3-container w3-theme-l1">
+                <header class="w3-container w3-theme">
                     <span onclick="document.getElementById('qrgen').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h5>QR code creator</h5>
                 </header>
                 <div class="w3-center">
-                    <iframe src="http://qrickit.com/qrickit_apps/qrickit_widget_home.php" height="450px" border="0"></iframe>
+                    <iframe src="http://qrickit.com/qrickit_apps/qrickit_widget_home.php" height="450px" frameborder="0"></iframe>
                     <div style="float:left;" class="ad"><script src="side-ad.js"></script></div>
                     <div style="float:right;" class="ad"><script src="side-ad.js"></script></div>
                 </div>
-                <footer class="w3-container w3-theme-l1">Site v6</footer>
+                <footer class="w3-container w3-theme">Site v6</footer>
             </div>
         </div>
 
         <div id="zunozapnote"/>
 
+        <script src="assets/js/cook.js"></script>
         <script src="assets/js/note.js"></script>
         <script src="assets/js/background.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 </html>
