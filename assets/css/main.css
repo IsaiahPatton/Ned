@@ -84,27 +84,12 @@ a:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-@media screen and (orientation:landscape) {
-    .right.logo { text-align: right; float: right; margin-right: 5px; }
-    .left.logo  { text-align: left; float: left;   margin-left:  5px; }
-    .logo       { background: rgba(0,0,0,0.45); border: 1px solid rgba(0,0,0,0.49); padding: 2px; width: 150px; height: 60px; }
-    .nobklogo   { padding: 2px; width: 150px; height: 60px; margin-bottom: 5px;}
-}
-
 @media screen and (orientation:portrait) {
-    .logo { width: 100px; height: 45px; padding-bottom: 3px; }
     .name { display: none; }
-
-    .right.logo, .left.nobklogo { display: none; }
-    .left.logo {
-        padding:0;
-        margin:0;
-    }
+    body { background-size:100%,cover; }
 }
 
-@media screen and (max-width: 550px) {
-    .nomobile { display:none; }
-}
+@media screen and (max-width: 550px) {.nomobile {display:none;}}
 
 figure {
     display: inline-block;
@@ -114,9 +99,7 @@ figure {
     margin-right: 4px;
 }
 
-.nlogo {
-    background: url("../images/logo_1_10.png") no-repeat;
-}
+.nlogo {background: url("../images/logo_1_10.png") no-repeat;}
 
 ul {
   list-style-type: none;
@@ -125,9 +108,7 @@ ul {
   overflow: hidden;
 }
 
-.top {
-  background-color: #333;
-}
+.top {background-color: #333;}
 
 li * {
   display: block;
@@ -147,9 +128,8 @@ li * {
 .gitbtn {
     background-color: #f7f7f7;
     color: black;
-    border-radius: 2px;
     font-size: 12px;
-    padding: 2px 6px 2px 6px;
+    padding: 4px 12px 4px 12px;
 }
 
 li a:hover:not(.active) { background-color: #111; }
