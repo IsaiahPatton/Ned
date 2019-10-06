@@ -49,90 +49,68 @@ a:hover {
 }
 
 .navbtn {
-    display: inline-block;
-    font-family: Arial;
-    text-decoration: none !important;
-    color: #333333;
-    background-color: rgba(5, 5, 5, 0.9);
-    text-align: center;
+    display:inline-block;
+    text-decoration:none !important;
+    color:#333333;
+    background-color: rgba(5,5,5, 0.9);
+    text-align:center;
     padding-top:8px;
-    min-width: 96px;
-    max-width: 96px;
+    min-width:96px;
+    max-width:96px;
     padding-bottom:8px;
 }
 
-.groupimage, .group img {
-    width: 30px;
-    height: 25px;
-}
-
-.group a { border: 0; margin: 1px;}
+.group a { border:0; margin:1px;}
 
 .smallg, figcaption {
     font-size: 9.8px;
     color: #333333;
 }
 
-.button img {
-    width: 43.5px;
-    height: 45px;
+@media screen and (orientation:portrait){
+    .name{display:none;}
+    body {background-size:100%,cover;}
 }
 
-.button:hover {
-    background-color: orange;
-    text-decoration: none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
+@media screen and (max-width: 550px){.nomobile{display:none;}}
 
-@media screen and (orientation:portrait) {
-    .name { display: none; }
-    body { background-size:100%,cover; }
-}
+figure {display: inline-block;margin: 2px 4px 2px 4px;}
+figure img {width: 30px;height: 25px;}
 
-@media screen and (max-width: 550px) {.nomobile {display:none;}}
-
-figure {
-    display: inline-block;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-.nlogo {background: url("../images/logo_1_10.png") no-repeat;}
+.nlogo {background:url("../images/logo_1_10.png") no-repeat;}
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  margin:0;
+  padding:0;
+  overflow:hidden;
 }
 
-.top {background-color: #333;}
+.top {background-color:#333;}
 
 li * {
-  display: block;
-  color: white;
+  display:block;
+  color:white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .navbtn * {
-  color: white;
-  text-align: center;
-  padding: 24px 4px;
-  text-decoration: none;
+  color:white;
+  text-align:center;
+  padding: 28px 4px;
+  text-decoration:none;
 }
 
-.gitbtn {
+.fbtn {
     background-color: #f7f7f7;
-    color: black;
-    font-size: 12px;
+    color:black;
+    font-size:12px;
     padding: 4px 12px 4px 12px;
 }
 
-li a:hover:not(.active) { background-color: #111; }
+li a:hover:not(.active){ background-color:#111; }
 
 input[type=text] {
     width: 650px;
@@ -141,7 +119,7 @@ input[type=text] {
     display: inline-block;
     border: 2px solid black;
     border-right: none;
-    border-radius: 2px;
+    border-radius:2px;
     box-shadow:1px 1.5px 20px #888888;
     box-sizing: border-box;
 }
@@ -151,28 +129,27 @@ input[type=submit] {
     padding: 13px 12px;
     border: 2px solid black;
     border-left: none;
-    border-radius: 2px;
+    border-radius:2px;
     cursor: pointer;
     position: relative;
-    right: 8px;
+    right:8px;
 }
 
-.modal {
+.modal{
   display:none;position:fixed;z-index:3;padding-top:34px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4);
 }
 
 .modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 90%;
+  position:relative;
+  background-color:#fefefe;
+  margin:auto;
+  padding:0;
+  border:1px solid #888;
+  width:90%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
+  -webkit-animation-name:animatetop;
   -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
+  animation-name:animatetop;
   animation-duration: 0.4s
 }
-
-.width-70 {width: 70%;}
+.width-70{width:70%;}
