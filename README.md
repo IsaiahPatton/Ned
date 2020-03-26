@@ -2,8 +2,8 @@
 
 Ned is a home page for you with a...
 
-Caluator, calander, clock, google, yahoo, working tv, working radio,
-links to outher websites, Money converter, Games, Safe Google, and lots more!
+Calculator, calander, clock, google, yahoo, working tv, working radio,
+links to other websites, Money converter, Games, Safe Google, and lots more!
 
 ## Run Ned
 https://n-e-d.github.io/
