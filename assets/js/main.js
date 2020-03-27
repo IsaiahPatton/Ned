@@ -13,6 +13,7 @@ function byId(id) {
 
 function open(id) {
     byId(id).style.display = "inline-block";
+    document.getElementById("ad").innerHTML = "<iframe src='ad.html' width='100%'></iframe>";
 }
 
 function startTime() {
