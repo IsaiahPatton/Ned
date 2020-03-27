@@ -91,8 +91,8 @@
         <div id="nsettings" class="w3-modal">
             <div class="w3-modal-content w3-card-8 w3-animate-top">
                 <header class="w3-container w3-theme">
-                    <span onclick="document.getElementById('nsettings').style.display='none'" class="w3-button w3-display-topright" style="font-size:2em;">&times;</span>
-                    <h5 style="padding:7px;">NedHome Settings</h5>
+                    <span onclick="byId('nsettings').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h5>Page Settings</h5>
                 </header>
                 <div class="w3-padding w3-center">
                     <br>
@@ -100,25 +100,20 @@
                         <button class="searchSwitch" onClick="switchSearch('google.com/search')">Google</button>
                         <button class="searchSwitch" onClick="switchSearch('duckduckgo.com/')">DuckDuckGo</button>
                         <button class="searchSwitch" onClick="switchSearch('ecosia.org/search')">Ecosia</button><br>
-                        <small>This site is not affiliated with any of the search engines provided</small>
                     </p><br><hr><script src="assets/js/ad.js"></script>
                 </div>
-                <footer class="w3-container w3-theme"><p style="font-size:14px;">Copyright &copy; 2016-2020</p></footer>
             </div>
         </div>
 
         <!--Calculator-->
         <div id="calculator" class="w3-modal">
-            <div class="w3-modal-content w3-card-8 w3-animate-top">
+            <div class="w3-modal-content w3-animate-top">
                 <header class="w3-container w3-theme">
-                    <span onclick="document.getElementById('calculator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <span onclick="byId('calculator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h5>Calculator</h5>
                 </header>
                 <div class="w3-center"><br><iframe class="calc" width="200px" height="243" src="tools/calculator.html" frameborder="0"></iframe><br></div>
-                <footer class="w3-container w3-theme">&nbsp;</footer>
             </div>
         </div>
-
-        <script src="assets/js/background.js"></script>
     </body>
 </html>

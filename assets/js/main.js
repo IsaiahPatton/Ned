@@ -1,4 +1,11 @@
-document.body.style.backgroundImage = "URL('assets/backgrounds/" + (new Date().getDay() + 2) + ".jpg')";
+document.body.style.backgroundImage = "URL('assets/backgrounds/" + (new Date().getDay() + 1) + ".jpg')";
+document.body.style.backgroundSize = window.innerWidth + "px " + window.innerHeight + "px";
+
+function browserResized() {
+    document.body.style.backgroundSize = window.innerWidth + "px " + window.innerHeight + "px";
+}
+
+window.onresize = browserResized
 
 function byId(id) {
     return document.getElementById(id);
@@ -21,7 +28,7 @@ function startTime() {
 
 function switchSearch(url) {
     setCookie("surl", url);
-    document.getElementById("search").action = "https://" + url;
+    byId("search").action = "https://" + url;
 }
 
 function setCookie(cname, cvalue) {
@@ -48,9 +55,7 @@ if (getCookie("surl") != "")
     switchSearch(getCookie("surl"));
 
 function showNote() {
-    document.getElementById("zunozapnote").innerHTML = "<div class=\"zznote\"><div class=\"zzhead\">Switch to ZunoZap</div>" +
-            "<span onclick=\"this.parentElement.style.display=\'none\';\">x</span><div class=\"zznote-container\">"
-                + "We recommend using <a href=\"http://zunozap.com/\">ZunoZap</a>, a fast and new web browser. Try it?</p>"
-                + "<a href='http://zunozap.com/'><button>YES</button></a></div></div>";
+    byId("zunozapnote").innerHTML = "<div class=\"zznote\"><div class=\"zzhead\">Switch to ZunoZap</div><span onclick=\"this.parentElement.style.display=\'none\';\">x</span><div class=\"zznote-container\">"
+                + "We recommend using <a href=\"http://zunozap.com/\">ZunoZap</a>, a fast and new web browser. Try it?</p><a href='http://zunozap.com/'><button>YES</button></a></div></div>";
 }
-if (!(navigator.userAgent.toString().includes("ZunoZap") || navigator.userAgent.toString().includes("hi"))) showNote();
+if (!(navigator.userAgent.toString().includes("ZunoZap") || navigator.userAgent.toString().includes("Firefox") || navigator.userAgent.toString().includes("Mobile"))) showNote();
