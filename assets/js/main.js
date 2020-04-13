@@ -1,19 +1,18 @@
-document.body.style.backgroundImage = "URL('assets/backgrounds/" + (new Date().getDay() + 1) + ".jpg')";
-document.body.style.backgroundSize = window.innerWidth + "px " + window.innerHeight + "px";
+document.body.style.backgroundImage = "URL('assets/backgrounds/" + (new Date().getDay() + 1) + ".webp')";
+browserResized();
 
 function browserResized() {
     document.body.style.backgroundSize = window.innerWidth + "px " + window.innerHeight + "px";
 }
-
 window.onresize = browserResized
 
-function byId(id) {
-    return document.getElementById(id);
+function byId(id) {return document.getElementById(id);
 }
 
 function open(id) {
     byId(id).style.display = "inline-block";
-    document.getElementById("ad").innerHTML = "<iframe src='ad.html' width='100%'></iframe>";
+    byId("ad").innerHTML = "<iframe src='ad.html' width='100%'></iframe>";
+    byId("calc").innerHTML = "<iframe class='calc' width='200px' height='243' src='tools/calculator.html' frameborder='0'></iframe>";
 }
 
 function startTime() {
@@ -22,12 +21,11 @@ function startTime() {
     var h = (hr = h = today.getHours()) > 12 ? h - 12 : h;
     var m = (m = today.getMinutes()) < 10 ? ("0" + m) : m;
     var days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Friday", "Sat"];
-    byId('theTime').innerHTML = days[today.getDay()] + " " + h + ":" + m + " " + (hr > 11 ? "PM" : "AM");
-
+    byId('time').innerHTML = days[today.getDay()] + " " + h + ":" + m + " " + (hr > 11 ? "PM" : "AM");
     var t = setTimeout(startTime, 15000);
 }
 
-function switchSearch(url) {
+function setSearch(url) {
     setCookie("surl", url);
     byId("search").action = "https://" + url;
 }

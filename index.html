@@ -13,7 +13,7 @@
         <ul class="top">
             <li><img class="w3-button" src="assets/images/logo_2_15.png" width="80px" height="46px" title="NedHome"></li>
             <li style="float:right"><a class="sett" href="javascript:open('nsettings')">&#9881;</a></li>
-            <li style="float:right"><span id="theTime" onload="startTime()">Time</span></li>
+            <li style="float:right"><span id="time" onload="startTime()"></span></li>
         </ul>
 
         <br><div style="padding-top:4em;">&nbsp;</div>
@@ -94,11 +94,10 @@
                 <div class="w3-padding w3-center">
                     <br>
                     <p id="advancedsearche">Search Engine:
-                        <button class="searchSwitch" onClick="switchSearch('google.com/search')">Google</button>
-                        <button class="searchSwitch" onClick="switchSearch('duckduckgo.com/')">DuckDuckGo</button>
-                        <button class="searchSwitch" onClick="switchSearch('ecosia.org/search')">Ecosia</button><br>
+                        <button onClick="setSearch('google.com/search')">Google</button>
+                        <button onClick="setSearch('duckduckgo.com/')">DuckDuckGo</button>
+                        <button onClick="setSearch('ecosia.org/search')">Ecosia</button><br>
                     </p><br><hr>
-                    <!--<script src="assets/js/ad.js"></script>-->
                     <div id="ad">test</div>
                 </div>
             </div>
@@ -111,7 +110,7 @@
                     <span onclick="byId('calculator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h5>Calculator</h5>
                 </header>
-                <div class="w3-center"><br><iframe class="calc" width="200px" height="243" src="tools/calculator.html" frameborder="0"></iframe><br></div>
+                <div class="w3-center"><br><div id="calc">loading</div><br></div>
             </div>
         </div>
     </body>
