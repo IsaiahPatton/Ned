@@ -6,12 +6,11 @@ function browserResized() {
 }
 window.onresize = browserResized
 
-function byId(id) {return document.getElementById(id);
-}
+function byId(id) {return document.getElementById(id);}
 
 function open(id) {
     byId(id).style.display = "inline-block";
-    byId("ad").innerHTML = "<iframe src='ad.html' width='100%'></iframe>";
+    byId("ad").innerHTML = "<iframe src='ad.html' width='100%' frameborder='0'></iframe>";
     byId("calc").innerHTML = "<iframe class='calc' width='200px' height='243' src='tools/calculator.html' frameborder='0'></iframe>";
 }
 
