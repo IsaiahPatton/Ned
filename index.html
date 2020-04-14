@@ -7,14 +7,13 @@
         <title>NedHome</title>
         <link rel="stylesheet" href="assets/css/w3-custom.css" type="text/css">
         <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     </head>
 
-    <body onload="startTime()">
-        <ul class="top">
-            <li><img class="w3-button" src="assets/images/logo.webp" width="80px" height="46px" title="NedHome"></li>
-            <li style="float:right"><a class="sett" href="javascript:open('nsettings')">&#9881;</a></li>
-            <li style="float:right"><span id="time" onload="startTime()"></span></li>
-        </ul>
+    <body>
+        <ul class="top"><li style="float:right"><a class="sett" href="javascript:open('nsettings')">&#9881;</a></li></ul>
 
         <center class="w3-center">
             <form method="get" id="search" action="https://google.com/search">
@@ -27,45 +26,45 @@
 
             <div class='group'>Email<br>
                 <figure>
-                    <a href="https://outlook.com"><img src="assets/images/email/outlook.webp"></a>
+                    <a href="https://outlook.com"><img asrc="assets/images/email/outlook.webp"></a>
                     <figcaption>Outlook</figcaption>
                 </figure>
                 <figure>
-                    <a href="https://gmail.com"><img src="assets/images/email/gmail.png"></a>
+                    <a href="https://gmail.com"><img asrc="assets/images/email/gmail.png"></a>
                     <figcaption>Gmail</figcaption>
                 </figure> 
                 <figure>
-                    <a href="https://yahoo.com"><img src="assets/images/email/yahoo-mail.png"></a>
+                    <a href="https://yahoo.com"><img asrc="assets/images/email/yahoo-mail.png"></a>
                     <figcaption>Yahoo Mail</figcaption>
                 </figure> 
             </div>
 
             <div class='group'>Social<br>
                 <figure>
-                    <a href="https://facebook.com"><img src="assets/images/social/facebook.webp"></a>
+                    <a href="https://facebook.com"><img asrc="assets/images/social/facebook.webp"></a>
                     <figcaption>Facebook</figcaption>
                 </figure>
                 <figure>
-                    <a href="https://twitter.com"><img src="assets/images/social/twitter.webp"></a>
+                    <a href="https://twitter.com"><img asrc="assets/images/social/twitter.webp"></a>
                     <figcaption>Twitter</figcaption>
                 </figure>
                 <figure>
-                    <a href="https://youtube.com"><img src="assets/images/social/youtube.webp"></a>
+                    <a href="https://youtube.com"><img asrc="assets/images/social/youtube.webp"></a>
                     <figcaption>YouTube</figcaption>
                 </figure>
             </div>
 
             <div class="group">Other<br>
                 <figure>
-                    <a href="https://wikipedia.org"><img src="assets/images/other/wikipedia.png"></a>
+                    <a href="https://wikipedia.org"><img asrc="assets/images/other/wikipedia.png"></a>
                     <figcaption>Wikipedia</figcaption>
                 </figure>
                 <figure>
-                    <a href="https://netflix.com"><img src="assets/images/other/netflix.png"></a>
+                    <a href="https://netflix.com"><img asrc="assets/images/other/netflix.png"></a>
                     <figcaption>Netflix</figcaption>
                 </figure> 
                 <figure>
-                    <a href="https://ebay.com"><img src="assets/images/other/ebay.png"></a>
+                    <a href="https://ebay.com"><img asrc="assets/images/other/ebay.png"></a>
                     <figcaption>eBay</figcaption>
                 </figure>
             </div>
@@ -109,4 +108,5 @@
             </div>
         </div>
     </body>
+    <script>finishLoad();</script>
 </html>
