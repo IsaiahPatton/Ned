@@ -4,7 +4,7 @@ function finishLoad() {
         if (is[i].getAttribute("asrc") != null)
             is[i].src = is[i].getAttribute("asrc");
 
-    document.body.style.backgroundImage = "URL('assets/backgrounds/" + (new Date().getDay() + 1) + ".webp')";
+    //document.body.style.backgroundImage = "URL('assets/backgrounds/" + (new Date().getDay() + 1) + ".webp')";
     browserResized();
 }
 
@@ -22,8 +22,10 @@ function open(id) {
 }
 
 function setSearch(url) {
-    setCookie("surl", url);
-    byId("search").action = "https://" + url;
+    if (url != "") {
+        setCookie("surl", url);
+        byId("search").action = "https://" + url;
+    }
 }
 
 function setCookie(cname, cvalue) {
@@ -47,4 +49,4 @@ function getCookie(cname) {
 }
 
 if (getCookie("surl") != "")
-    switchSearch(getCookie("surl"));
+    setSearch(getCookie("surl"));

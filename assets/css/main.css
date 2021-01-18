@@ -2,18 +2,21 @@
 li{float:left}
 .footer{padding:0;margin:0;bottom:0;position:fixed;width:100%}
 .footer p{color:white}
-figcaption{font-size:10px;color:#333333}
+figcaption{font-size:8px;color:rgb(40,40,40)}
 figure{display:inline-block;margin:2px 4px 2px 4px}
-figure img{width:30px;height:25px}
+figure img{width:24px;height:24px}
 .group a{padding:6px;margin:3px;display:inline-block}
 a:hover{color:gray}
 ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
 li * {display:block;padding:14px 16px;text-decoration:none;}
 li a:hover:not(.active){background-color:#111}
+body{background-color:rgb(240,240,240);}
 
-.button,.group {font-family:Arial;font-weight:bold;border:none;display:inline-block;padding:8px 6px;margin:2px;color:#333;background-color:rgba(155,155,155,0.6);border-radius:5px}
-.navbtn {display:inline-block;color:#333;background-color:rgba(5,5,5,0.9);text-align:center;padding-top:8px;min-width:96px;max-width:96px;padding-bottom:8px}
-.navbtn * {color:white;text-align:center;padding:28px 4px;text-decoration:none}
+.group { margin-left:-3px !important;margin-right:-2px !important;}
+.button,.group {font-family:Arial;font-weight:bold;border:none;display:inline-block;padding:16px 24px;margin:-1px;color:rgb(0,0,0);font-size:12px;background-color:rgba(0,0,0,0.1);border-radius:1px}
+.navbtn {display:inline-block;color:#111;background-color:transparent;text-align:center;padding-top:8px;min-width:96px;max-width:96px;padding-bottom:8px}
+.navbtn * {color:rgb(220,220,220);text-align:center;padding:28px 4px;text-decoration:none}
 
-input[type=text]  {margin-top:11em;margin-bottom:4em;width:760px;max-width:80%;padding:16px 12px;display:inline-block;border:2px solid black;border-right:none;border-radius:2px;box-shadow:1px 1.5px 20px #888888;box-sizing:border-box;}
+.searchpng {margin-to1p:0.1em;}
+input[type=text]  {margin-top:2em;margin-bottom:4em;width:760px;max-width:80%;padding:16px 12px;display:inline-block;border:2px solid black;border-right:none;border-radius:2px;box-shadow:1px 1.5px 20px #888888;box-sizing:border-box;}
 input[type=submit]{padding:16px 15px;border:2px solid black;border-left:none;border-radius:2px;cursor:pointer;position:relative;right:8px;background-color:white;}

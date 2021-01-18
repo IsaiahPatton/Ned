@@ -14,19 +14,22 @@
 
     <body>
         <ul class="top"><li style="float:right"><a class="sett" href="javascript:open('nsettings')">&#9881;</a></li></ul>
+        <style>.gsc-search-box {display:none;}.gsc-control-cse {background-color:transparent;border:0;}</style>
+<script async src="https://cse.google.com/cse.js?cx=010089712648746326687:rrtemjtc4da"></script>
+<div class="gcse-search" style="display:none;"></div>
 
         <center class="w3-center">
-            <form method="get" id="search" action="https://google.com/search">
+            <img class="searchpng" src="assets/search.png">
+            <form method="get" id="search" action="">
                 <div class="search">
                     <input id="WS-TXT" type="text" name="q" placeholder="Search the web">
                     <input type="submit" value="&#128269;">
                 </div>
             </form>
             <script src="assets/js/main.js"></script>
-
-            <div class='group'>Email<br>
+            <div class='group'>
                 <figure>
-                    <a href="https://outlook.com"><img asrc="assets/images/email/outlook.webp"></a>
+                    <a href="https://outlook.com"><img asrc="assets/images/email/outlook.png"></a>
                     <figcaption>Outlook</figcaption>
                 </figure>
                 <figure>
@@ -38,23 +41,21 @@
                     <figcaption>Yahoo Mail</figcaption>
                 </figure> 
             </div>
-
-            <div class='group'>Social<br>
+            <div class='group'>
                 <figure>
                     <a href="https://facebook.com"><img asrc="assets/images/social/facebook.webp"></a>
                     <figcaption>Facebook</figcaption>
                 </figure>
                 <figure>
-                    <a href="https://twitter.com"><img asrc="assets/images/social/twitter.webp"></a>
-                    <figcaption>Twitter</figcaption>
+                    <a href="https://discord.com/app"><img asrc="assets/images/social/discord.png"></a>
+                    <figcaption>Discord</figcaption>
                 </figure>
                 <figure>
-                    <a href="https://youtube.com"><img asrc="assets/images/social/youtube.webp"></a>
+                    <a href="https://youtube.com"><img asrc="assets/images/social/youtube.png"></a>
                     <figcaption>YouTube</figcaption>
                 </figure>
             </div>
-
-            <div class="group">Other<br>
+            <div class="group">
                 <figure>
                     <a href="https://wikipedia.org"><img asrc="assets/images/other/wikipedia.png"></a>
                     <figcaption>Wikipedia</figcaption>
@@ -72,9 +73,7 @@
 
         <div class="footer container">
             <div style="text-align:center;margin-left:15%;margin-right:15%;">
-                <div class="navbtn"><a href="https://fungus-soft.com/tv/">Tv</a></div>
-                <div class="navbtn"><a href="javascript:open('calculator')">Calculator</a></div>
-                <div class="navbtn"><a href="/games">Games</a></div>
+                <small style="font-size:8px;">&copy; 2016-2021</small><small style="font-size:8px;">&nbsp;|&nbsp;<a href="https://zunozap.javazilla.com/privacy.html">Privacy Policy</a></small>
             </div>
         </div>
 
@@ -88,23 +87,13 @@
                 <div class="w3-padding w3-center">
                     <br>
                     <p id="advancedsearche">Search Engine:
-                        <button onClick="setSearch('google.com/search')">Google</button>
+                        <button onClick="setSearch('')">Google CSE</button>
+                        <button onClick="setSearch('google.com/search')">Google External</button>
                         <button onClick="setSearch('duckduckgo.com/')">DuckDuckGo</button>
                         <button onClick="setSearch('ecosia.org/search')">Ecosia</button><br>
                     </p><br><hr>
                     <div id="ad">test</div>
                 </div>
-            </div>
-        </div>
-
-        <!--Calculator-->
-        <div id="calculator" class="w3-modal">
-            <div class="w3-modal-content w3-animate-top">
-                <header class="w3-container w3-theme">
-                    <span onclick="byId('calculator').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <h5>Calculator</h5>
-                </header>
-                <div class="w3-center"><br><div id="calc">loading</div><br></div>
             </div>
         </div>
     </body>
