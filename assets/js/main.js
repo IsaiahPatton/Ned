@@ -22,10 +22,8 @@ function open(id) {
 }
 
 function setSearch(url) {
-    if (url != "") {
-        setCookie("surl", url);
-        byId("search").action = "https://" + url;
-    }
+    setCookie("surl", url);
+    if (url != "") byId("search").action = "https://" + url;
 }
 
 function setCookie(cname, cvalue) {
