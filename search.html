@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="NedHome webportal. Your new startpage">
-      <title>NedHome</title>
-      <link rel="stylesheet" href="assets/css/w3-custom.css" type="text/css">
-      <link rel="stylesheet" href="assets/css/main.css" type="text/css">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NedHome webportal. Your new startpage">
+    <title>Search</title>
+    <link rel="stylesheet" href="./assets/w3-min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/main.css" type="text/css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  </head>
+  <body>
+    <img class="searchpnga" src="assets/images/logo.png" width="48px" style="padding:0;margin:4px;display:inline-block;float:left">
+    <form method="get" id="search" action="" style="display:inline-block;padding:0;margin:8px;">
+        <input id="WS-TXT" type="text" name="q" placeholder="Search the web" style="display:inline-block;margin:0;">
+    </form>
+    <style>
+     * {filter: none !important; z-index: -1 !important;}
+     input[type=text]  {margin-top:2em;margin-bottom:4em;width:760px;max-width:50%;padding:8px 4px;display:inline-block;border:2px solid rgba(0,0,0,0.3);border-radius:2px;box-shadow:1px 1.5px 20px #888888;box-sizing:border-box;}
+     .gsc-search-box {display:none;}.gsc-control-cse {background-color:transparent;border:0; z-index: 0 !important; }
+     .gsc-results-wrapper-overlay {box-shadow:0 !important;-webkit-box-shadow: none !important;width:100vw;padding:0;padding-left:4em;margin:0;left:0;height:90vh;top:80px; z-index: 0 !important;}
+    </style>
+    <script async src="https://cse.google.com/cse.js?cx=010089712648746326687:rrtemjtc4da"></script>
+    <div class="gcse-search" style="display:none;"></div>
+    <script src="assets/main.js"></script>
 
-    <body>
-        <img class="searchpnga" src="assets/logos/logo.png" width="48px" style="padding:0;margin:0;">
-        <form method="get" id="search" action="" style="display:inline-block;">
-            <div class="search">
-                <input id="WS-TXT" type="text" name="q" placeholder="Search the web">
-            </div>
-        </form>
-        <style>
-          * {filter: none !important; z-index: -1 !important;}
-          input[type=text]  {margin-top:2em;margin-bottom:4em;width:760px;max-width:50%;padding:8px 4px;display:inline-block;border:2px solid rgba(0,0,0,0.3);border-radius:2px;box-shadow:1px 1.5px 20px #888888;box-sizing:border-box;}
-          .gsc-search-box {display:none;}.gsc-control-cse {background-color:transparent;border:0; z-index: 0 !important; }
-          .gsc-results-wrapper-overlay {box-shadow:0 !important; -webkit-box-shadow: none !important;width:100vw;padding:0;padding-left:3em;margin:0;left:0;height:90vh;top:100px; z-index: 0 !important;}
-        </style>
-        <script async src="https://cse.google.com/cse.js?cx=010089712648746326687:rrtemjtc4da"></script>
-        <div class="gcse-search" style="display:none;"></div>
-        <script src="assets/js/main.js"></script>
-
-        <div class="footer container">
-            <div style="text-align:center;margin-left:15%;margin-right:15%;">
-                <small style="font-size:8px;">&copy; 2016-2021</small><small style="font-size:8px;">&nbsp;|&nbsp;<a href="https://zunozap.javazilla.com/privacy.html">Privacy Policy</a></small>
-            </div>
-        </div>
-    </body>
-    <script>finishLoad();</script>
+    <div class="footer container">
+      <div style="text-align:center;margin-left:15%;margin-right:15%;">
+        <small style="font-size:8px;">&copy; 2016-2021</small><small style="font-size:8px;">&nbsp;|&nbsp;<a href="./privacy.html">Privacy Policy</a></small>
+      </div>
+    </div>
+  </body>
 </html>
