@@ -1,19 +1,18 @@
 <html>
     <style>
-    .time{font-size:4em;}small{font-size:0.4em;}iframe[name="speedyadsframe"]{position:absolute;bottom:0;left:20%;}
+    .time{font-size:4em;}small{font-size:0.3em;}iframe[name="speedyadsframe"]{position:absolute;bottom:0;left:20%;}
     </style>
     <body onload="startTime()"><CENTER><h1 id="txt"></h1></CENTER></body>
     <script>
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"];
-    var month = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var month = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
     function startTime(){
         var today = new Date();
         var h = today.getHours();
         var m = today.getMinutes();
         var s = today.getSeconds();
-        if (h > 12)
-            h = h - 12;
+        if (h > 12) h = h - 12;
         m = checkTime(m);
         s = checkTime(s);
         var timeraw = checkTime(h) + ":" + m;
@@ -29,5 +28,4 @@
     }
     function checkTime(i){return i < 10 ? i = "0" + i : i;}
     </script>
-
 </html>
